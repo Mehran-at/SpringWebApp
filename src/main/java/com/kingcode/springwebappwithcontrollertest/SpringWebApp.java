@@ -9,9 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class TacoApplication {
+public class SpringWebApp {
     public static void main(String[] args) {
-        SpringApplication.run(TacoApplication.class, args);
+        SpringApplication.run(SpringWebApp.class, args);
     }
 
     @Bean
