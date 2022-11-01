@@ -1,4 +1,4 @@
-package com.kingcode.springwebappwithcontrollertest.tacoorder;
+package com.kingcode.springwebapp.tacoorder;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
-import com.kingcode.springwebappwithcontrollertest.taco.Taco;
+import com.kingcode.springwebapp.taco.Taco;
 import org.hibernate.validator.constraints.CreditCardNumber;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;

@@ -1,4 +1,4 @@
-package com.kingcode.springwebappwithcontrollertest.ingredient;
+package com.kingcode.springwebapp.ingredient;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;

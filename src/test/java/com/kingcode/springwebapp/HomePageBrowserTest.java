@@ -1,4 +1,4 @@
-package com.kingcode.springwebappwithcontrollertest;
+package com.kingcode.springwebapp;
 
 import java.util.concurrent.TimeUnit;
 

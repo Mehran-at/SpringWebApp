@@ -1,8 +1,8 @@
-package com.kingcode.springwebappwithcontrollertest;
+package com.kingcode.springwebapp;
 
-import com.kingcode.springwebappwithcontrollertest.ingredient.Ingredient;
-import com.kingcode.springwebappwithcontrollertest.ingredient.Ingredient.Type;
-import com.kingcode.springwebappwithcontrollertest.ingredient.IngredientRepository;
+import com.kingcode.springwebapp.ingredient.Ingredient;
+import com.kingcode.springwebapp.ingredient.Ingredient.Type;
+import com.kingcode.springwebapp.ingredient.IngredientRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

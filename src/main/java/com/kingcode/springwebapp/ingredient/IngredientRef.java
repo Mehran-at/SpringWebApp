@@ -1,4 +1,4 @@
-package com.kingcode.springwebappwithcontrollertest.ingredient;
+package com.kingcode.springwebapp.ingredient;
 
 import lombok.Data;
 

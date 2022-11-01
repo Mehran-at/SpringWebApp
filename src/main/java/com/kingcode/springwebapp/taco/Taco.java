@@ -1,4 +1,4 @@
-package com.kingcode.springwebappwithcontrollertest.taco;
+package com.kingcode.springwebapp.taco;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -7,8 +7,8 @@ import java.util.List;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import com.kingcode.springwebappwithcontrollertest.ingredient.Ingredient;
-import com.kingcode.springwebappwithcontrollertest.ingredient.IngredientRef;
+import com.kingcode.springwebapp.ingredient.Ingredient;
+import com.kingcode.springwebapp.ingredient.IngredientRef;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 

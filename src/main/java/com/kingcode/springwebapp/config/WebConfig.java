@@ -1,4 +1,4 @@
-package com.kingcode.springwebappwithcontrollertest.config;
+package com.kingcode.springwebapp.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

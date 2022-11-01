@@ -1,7 +1,7 @@
-package com.kingcode.springwebappwithcontrollertest;
+package com.kingcode.springwebapp;
 
-import com.kingcode.springwebappwithcontrollertest.ingredient.IngredientRepository;
-import com.kingcode.springwebappwithcontrollertest.tacoorder.TacoOrderRepository;
+import com.kingcode.springwebapp.ingredient.IngredientRepository;
+import com.kingcode.springwebapp.tacoorder.TacoOrderRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,5 @@
-package com.kingcode.springwebappwithcontrollertest.tacoorder;
+package com.kingcode.springwebapp.tacoorder;
 
-import com.kingcode.springwebappwithcontrollertest.tacoorder.TacoOrder;
-import com.kingcode.springwebappwithcontrollertest.tacoorder.TacoOrderRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;

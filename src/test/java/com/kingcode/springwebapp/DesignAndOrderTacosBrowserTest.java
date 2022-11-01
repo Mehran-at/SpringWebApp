@@ -1,4 +1,4 @@
-package com.kingcode.springwebappwithcontrollertest;
+package com.kingcode.springwebapp;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

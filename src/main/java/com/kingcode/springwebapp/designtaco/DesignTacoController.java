@@ -1,10 +1,10 @@
-package com.kingcode.springwebappwithcontrollertest.designtaco;
+package com.kingcode.springwebapp.designtaco;
 
-import com.kingcode.springwebappwithcontrollertest.ingredient.Ingredient;
-import com.kingcode.springwebappwithcontrollertest.ingredient.Ingredient.Type;
-import com.kingcode.springwebappwithcontrollertest.taco.Taco;
-import com.kingcode.springwebappwithcontrollertest.tacoorder.TacoOrder;
-import com.kingcode.springwebappwithcontrollertest.ingredient.IngredientRepository;
+import com.kingcode.springwebapp.ingredient.Ingredient;
+import com.kingcode.springwebapp.ingredient.Ingredient.Type;
+import com.kingcode.springwebapp.taco.Taco;
+import com.kingcode.springwebapp.tacoorder.TacoOrder;
+import com.kingcode.springwebapp.ingredient.IngredientRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

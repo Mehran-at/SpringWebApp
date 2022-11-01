@@ -1,8 +1,8 @@
-package com.kingcode.springwebappwithcontrollertest.tacoorder;
+package com.kingcode.springwebapp.tacoorder;
 
-import com.kingcode.springwebappwithcontrollertest.ingredient.Ingredient;
-import com.kingcode.springwebappwithcontrollertest.ingredient.Ingredient.Type;
-import com.kingcode.springwebappwithcontrollertest.taco.Taco;
+import com.kingcode.springwebapp.ingredient.Ingredient;
+import com.kingcode.springwebapp.ingredient.Ingredient.Type;
+import com.kingcode.springwebapp.taco.Taco;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;

@@ -1,4 +1,4 @@
-package com.kingcode.springwebappwithcontrollertest.tacoorder;
+package com.kingcode.springwebapp.tacoorder;
 
 import org.springframework.data.repository.CrudRepository;
 

@@ -1,4 +1,4 @@
-package com.kingcode.springwebappwithcontrollertest;
+package com.kingcode.springwebapp;
 
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -12,13 +12,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import com.kingcode.springwebappwithcontrollertest.designtaco.DesignTacoController;
-import com.kingcode.springwebappwithcontrollertest.ingredient.Ingredient;
-import com.kingcode.springwebappwithcontrollertest.ingredient.Ingredient.Type;
-import com.kingcode.springwebappwithcontrollertest.ingredient.IngredientRef;
-import com.kingcode.springwebappwithcontrollertest.taco.Taco;
-import com.kingcode.springwebappwithcontrollertest.ingredient.IngredientRepository;
-import com.kingcode.springwebappwithcontrollertest.tacoorder.TacoOrderRepository;
+import com.kingcode.springwebapp.designtaco.DesignTacoController;
+import com.kingcode.springwebapp.ingredient.Ingredient;
+import com.kingcode.springwebapp.ingredient.Ingredient.Type;
+import com.kingcode.springwebapp.ingredient.IngredientRef;
+import com.kingcode.springwebapp.taco.Taco;
+import com.kingcode.springwebapp.ingredient.IngredientRepository;
+import com.kingcode.springwebapp.tacoorder.TacoOrderRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
