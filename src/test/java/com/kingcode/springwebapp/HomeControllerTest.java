@@ -36,5 +36,4 @@ public class HomeControllerTest {
             .andExpect(content().string(
                 containsString("Welcome to...")));
     }
-
 }

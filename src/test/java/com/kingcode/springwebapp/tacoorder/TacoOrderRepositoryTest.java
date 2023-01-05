@@ -5,14 +5,14 @@ import com.kingcode.springwebapp.ingredient.Ingredient.Type;
 import com.kingcode.springwebapp.taco.Taco;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-@DataJdbcTest
+@DataJpaTest
 public class TacoOrderRepositoryTest {
 
     @Autowired
@@ -59,5 +59,4 @@ public class TacoOrderRepositoryTest {
         assertThat(tacos.size()).isEqualTo(2);
         assertThat(tacos).containsExactlyInAnyOrder(taco1, taco2);
     }
-
 }

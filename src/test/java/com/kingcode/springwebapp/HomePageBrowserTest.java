@@ -1,7 +1,5 @@
 package com.kingcode.springwebapp;
 
-import java.util.concurrent.TimeUnit;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -13,8 +11,10 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.util.concurrent.TimeUnit;
+
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class HomePageBrowserTest {
 
     @LocalServerPort
@@ -50,6 +50,4 @@ public class HomePageBrowserTest {
             .getAttribute("src");
         Assertions.assertThat(imgSrc).isEqualTo(homePage + "/images/spring_learning.jpg");
     }
-
-
 }

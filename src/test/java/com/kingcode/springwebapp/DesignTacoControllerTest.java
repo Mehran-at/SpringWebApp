@@ -1,23 +1,10 @@
 package com.kingcode.springwebapp;
 
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-
 import com.kingcode.springwebapp.designtaco.DesignTacoController;
 import com.kingcode.springwebapp.ingredient.Ingredient;
 import com.kingcode.springwebapp.ingredient.Ingredient.Type;
-import com.kingcode.springwebapp.ingredient.IngredientRef;
-import com.kingcode.springwebapp.taco.Taco;
 import com.kingcode.springwebapp.ingredient.IngredientRepository;
+import com.kingcode.springwebapp.taco.Taco;
 import com.kingcode.springwebapp.tacoorder.TacoOrderRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -29,6 +16,14 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(DesignTacoController.class)
@@ -72,10 +67,10 @@ public class DesignTacoControllerTest {
         design.setName("Test Taco");
 
         design.setIngredients(
-            Arrays.asList(new IngredientRef("FLTO"), new IngredientRef("GRBF"), new IngredientRef("CHED")));
-//            new Ingredient("FLTO", "Flour Tortilla", Type.WRAP),
-//            new Ingredient("GRBF", "Ground Beef", Type.PROTEIN),
-//            new Ingredient("CHED", "Cheddar", Type.CHEESE)));
+            Arrays.asList(
+                new Ingredient("FLTO", "Flour Tortilla", Type.WRAP),
+                new Ingredient("GRBF", "Ground Beef", Type.PROTEIN),
+                new Ingredient("CHED", "Cheddar", Type.CHEESE)));
 
     }
 
@@ -99,5 +94,4 @@ public class DesignTacoControllerTest {
             .andExpect(status().is3xxRedirection())
             .andExpect(header().stringValues("Location", "/orders/current"));
     }
-
 }
