@@ -2,9 +2,9 @@ package com.kingcode.springwebapp.designtaco;
 
 import com.kingcode.springwebapp.ingredient.Ingredient;
 import com.kingcode.springwebapp.ingredient.Ingredient.Type;
+import com.kingcode.springwebapp.ingredient.IngredientRepository;
 import com.kingcode.springwebapp.taco.Taco;
 import com.kingcode.springwebapp.tacoorder.TacoOrder;
-import com.kingcode.springwebapp.ingredient.IngredientRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,8 +26,7 @@ public class DesignTacoController {
     private final IngredientRepository ingredientRepo;
 
     @Autowired
-    public DesignTacoController(
-        IngredientRepository ingredientRepo) {
+    public DesignTacoController(IngredientRepository ingredientRepo) {
         this.ingredientRepo = ingredientRepo;
     }
 

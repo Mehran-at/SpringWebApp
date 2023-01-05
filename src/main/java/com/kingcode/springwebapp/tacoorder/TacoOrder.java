@@ -1,5 +1,6 @@
 package com.kingcode.springwebapp.tacoorder;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -20,6 +21,7 @@ import lombok.Data;
 @Table
 public class TacoOrder implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Id
