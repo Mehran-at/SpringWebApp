@@ -17,7 +17,7 @@ import javax.validation.Valid;
 @SessionAttributes("tacoOrder")
 public class TacoOrderController {
 
-    private final TacoOrderRepository orderRepo;
+    private TacoOrderRepository orderRepo;
 
     public TacoOrderController(TacoOrderRepository orderRepo) {
         this.orderRepo = orderRepo;
