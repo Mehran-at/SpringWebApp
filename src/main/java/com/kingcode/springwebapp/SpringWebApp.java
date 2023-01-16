@@ -6,8 +6,10 @@ import com.kingcode.springwebapp.ingredient.IngredientRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
+//@SpringBootApplication(exclude={CassandraDataAutoConfiguration.class})
 @SpringBootApplication
 public class SpringWebApp {
     public static void main(String[] args) {
