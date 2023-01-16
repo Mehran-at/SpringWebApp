@@ -2,3 +2,8 @@ $ docker network create cassandra-net
 $ docker run --name my-cassandra --network cassandra-net -p 9042:9042 -d cassandra:latest
 
 This starts the single-node cluster and exposes the node’s port (9042) on the host machine so that your application can access it.
+
+
+
+$ docker run -it --network cassandra-net --rm cassandra cqlsh my-cassandra
+Using the Cassandra CQL (Cassandra Query Language) shell, you can create a keyspace for the Taco Cloud application.
