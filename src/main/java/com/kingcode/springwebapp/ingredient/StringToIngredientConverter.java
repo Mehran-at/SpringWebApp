@@ -1,7 +1,8 @@
-package com.kingcode.springwebapp.taco;
+package com.kingcode.springwebapp.ingredient;
 
 import com.kingcode.springwebapp.ingredient.Ingredient;
 import com.kingcode.springwebapp.ingredient.IngredientRepository;
+import com.kingcode.springwebapp.taco.IngredientUDT;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 

@@ -1,7 +1,7 @@
 package com.kingcode.springwebapp;
 
 import com.kingcode.springwebapp.ingredient.IngredientRepository;
-import com.kingcode.springwebapp.tacoorder.TacoOrderRepository;
+import com.kingcode.springwebapp.tacoorder.OrderRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +26,7 @@ public class HomeControllerTest {
     private IngredientRepository ingredientRepository;
 
     @MockBean
-    private TacoOrderRepository orderRepository;
+    private OrderRepository orderRepository;
 
     @Test
     public void testHomePage() throws Exception {

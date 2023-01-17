@@ -19,7 +19,7 @@ import java.util.UUID;
 
 @Data
 @Table("orders") // <1>
-public class TacoOrder implements Serializable {
+public class Order implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

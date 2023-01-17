@@ -14,14 +14,14 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @Disabled
-public class TacoOrderRepositoryTest {
+public class OrderRepositoryTest {
 
     @Autowired
-    TacoOrderRepository orderRepo;
+    OrderRepository orderRepo;
 
     @Test
     public void saveOrderWithTwoTacos() {
-        TacoOrder order = new TacoOrder();
+        Order order = new Order();
         order.setDeliveryName("Test McTest");
         order.setDeliveryStreet("1234 Test Lane");
         order.setDeliveryCity("Testville");
@@ -43,10 +43,10 @@ public class TacoOrderRepositoryTest {
         taco2.addIngredient(new Ingredient("JACK", "Monterrey Jack", Type.CHEESE));
         order.addTaco(TacoUDRUtils.toTacoUDT(taco2));
 
-        TacoOrder savedOrder = orderRepo.save(order);
+        Order savedOrder = orderRepo.save(order);
         assertThat(savedOrder.getId()).isNotNull();
 
-        TacoOrder fetchedOrder = orderRepo.findById(savedOrder.getId()).get();
+        Order fetchedOrder = orderRepo.findById(savedOrder.getId()).get();
         assertThat(fetchedOrder.getDeliveryName()).isEqualTo("Test McTest");
         assertThat(fetchedOrder.getDeliveryStreet()).isEqualTo("1234 Test Lane");
         assertThat(fetchedOrder.getDeliveryCity()).isEqualTo("Testville");

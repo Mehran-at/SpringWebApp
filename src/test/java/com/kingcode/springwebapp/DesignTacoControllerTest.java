@@ -5,7 +5,7 @@ import com.kingcode.springwebapp.ingredient.Ingredient;
 import com.kingcode.springwebapp.ingredient.Ingredient.Type;
 import com.kingcode.springwebapp.ingredient.IngredientRepository;
 import com.kingcode.springwebapp.taco.Taco;
-import com.kingcode.springwebapp.tacoorder.TacoOrderRepository;
+import com.kingcode.springwebapp.tacoorder.OrderRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -40,7 +40,7 @@ public class DesignTacoControllerTest {
     private IngredientRepository ingredientRepository;
 
     @MockBean
-    private TacoOrderRepository orderRepository;
+    private OrderRepository orderRepository;
 
     @BeforeEach
     public void setup() {
