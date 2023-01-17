@@ -1,13 +1,10 @@
-spring:
-  data:
-    cassandra:
-      keyspace-name: tacocloud
-      schema-action: recreate
-      local-datacenter: datacenter1
+# for production need to configure db
+#spring:
+#  data:
+#    mongodb:
+#      host: mongodb.tacocloud.com
+#      port: 27017
 #      username: tacocloud
-#      password: s3cr3tP455w0rd
-#      contact-points:
-#        - casshost-1.tacocloud.com
-#        - casshost-2.tacocloud.com
-#        - casshost-3.tacocloud.com
-#      port: 9043
+#      password: s3cr3tp455w0rd
+#      database: tacoclouddb
+#logging.level.org.springframework.jdbc.core.JdbcTemplate=debug

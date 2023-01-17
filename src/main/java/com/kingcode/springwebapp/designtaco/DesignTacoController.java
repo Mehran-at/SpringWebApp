@@ -4,8 +4,7 @@ import com.kingcode.springwebapp.ingredient.Ingredient;
 import com.kingcode.springwebapp.ingredient.Ingredient.Type;
 import com.kingcode.springwebapp.ingredient.IngredientRepository;
 import com.kingcode.springwebapp.taco.Taco;
-import com.kingcode.springwebapp.taco.TacoUDT;
-import com.kingcode.springwebapp.tacoorder.Order;
+import com.kingcode.springwebapp.tacoorder.TacoOrder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -45,8 +44,8 @@ public class DesignTacoController {
     }
 
     @ModelAttribute(name = "tacoOrder")
-    public Order order() {
-        return new Order();
+    public TacoOrder order() {
+        return new TacoOrder();
     }
 
     @ModelAttribute(name = "taco")
@@ -62,13 +61,13 @@ public class DesignTacoController {
     @PostMapping
     public String processTaco(
         @Valid Taco taco, Errors errors,
-        @ModelAttribute Order order) {
+        @ModelAttribute TacoOrder tacoOrder) {
 
         if (errors.hasErrors()) {
             return "design";
         }
 
-        order.addTaco(new TacoUDT(taco.getName(), taco.getIngredients()));
+        tacoOrder.addTaco(taco);
 
         return "redirect:/orders/current";
     }

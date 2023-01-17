@@ -15,11 +15,11 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping("/orders")
 @SessionAttributes("tacoOrder")
-public class OrderController {
+public class TacoOrderController {
 
-    private OrderRepository orderRepo;
+    private TacoOrderRepository orderRepo;
 
-    public OrderController(OrderRepository orderRepo) {
+    public TacoOrderController(TacoOrderRepository orderRepo) {
         this.orderRepo = orderRepo;
     }
 
@@ -29,12 +29,12 @@ public class OrderController {
     }
 
     @PostMapping
-    public String processOrder(@Valid Order order, Errors errors, SessionStatus sessionStatus) {
+    public String processOrder(@Valid TacoOrder tacoOrder, Errors errors, SessionStatus sessionStatus) {
         if (errors.hasErrors()) {
             return "orderForm";
         }
 
-        orderRepo.save(order);
+        orderRepo.save(tacoOrder);
         sessionStatus.setComplete();
 
         return "redirect:/";

@@ -8,8 +8,9 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+
 @SpringBootTest
-public class IngredientRepositoryTest {
+public class IngredientRepositoryTests {
 
     @Autowired
     IngredientRepository ingredientRepo;

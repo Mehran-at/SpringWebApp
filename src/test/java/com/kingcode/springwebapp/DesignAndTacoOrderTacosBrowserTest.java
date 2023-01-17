@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
@@ -17,9 +18,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+@ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-public class DesignAndOrderTacosBrowserTest {
+public class DesignAndTacoOrderTacosBrowserTest {
 
     private static HtmlUnitDriver browser;
 
@@ -91,35 +94,35 @@ public class DesignAndOrderTacosBrowserTest {
     private void assertDesignPageElements() {
         assertThat(browser.getCurrentUrl()).isEqualTo(designPageUrl());
         List<WebElement> ingredientGroups = browser.findElementsByClassName("ingredient-group");
-        assertThat(ingredientGroups.size()).isEqualTo(5);
+        assertThat(ingredientGroups).hasSize(5);
 
         WebElement wrapGroup = browser.findElementByCssSelector("div.ingredient-group#wraps");
         List<WebElement> wraps = wrapGroup.findElements(By.tagName("div"));
-        assertThat(wraps.size()).isEqualTo(2);
+        assertThat(wraps).hasSize(2);
         assertIngredient(wrapGroup, 0, "FLTO", "Flour Tortilla");
         assertIngredient(wrapGroup, 1, "COTO", "Corn Tortilla");
 
         WebElement proteinGroup = browser.findElementByCssSelector("div.ingredient-group#proteins");
         List<WebElement> proteins = proteinGroup.findElements(By.tagName("div"));
-        assertThat(proteins.size()).isEqualTo(2);
+        assertThat(proteins).hasSize(2);
         assertIngredient(proteinGroup, 0, "GRBF", "Ground Beef");
         assertIngredient(proteinGroup, 1, "CARN", "Carnitas");
 
         WebElement cheeseGroup = browser.findElementByCssSelector("div.ingredient-group#cheeses");
         List<WebElement> cheeses = proteinGroup.findElements(By.tagName("div"));
-        assertThat(cheeses.size()).isEqualTo(2);
+        assertThat(cheeses).hasSize(2);
         assertIngredient(cheeseGroup, 0, "CHED", "Cheddar");
         assertIngredient(cheeseGroup, 1, "JACK", "Monterrey Jack");
 
         WebElement veggieGroup = browser.findElementByCssSelector("div.ingredient-group#veggies");
         List<WebElement> veggies = proteinGroup.findElements(By.tagName("div"));
-        assertThat(veggies.size()).isEqualTo(2);
+        assertThat(veggies).hasSize(2);
         assertIngredient(veggieGroup, 0, "TMTO", "Diced Tomatoes");
         assertIngredient(veggieGroup, 1, "LETC", "Lettuce");
 
         WebElement sauceGroup = browser.findElementByCssSelector("div.ingredient-group#sauces");
         List<WebElement> sauces = proteinGroup.findElements(By.tagName("div"));
-        assertThat(sauces.size()).isEqualTo(2);
+        assertThat(sauces).hasSize(2);
         assertIngredient(sauceGroup, 0, "SLSA", "Salsa");
         assertIngredient(sauceGroup, 1, "SRCR", "Sour Cream");
     }
@@ -145,18 +148,18 @@ public class DesignAndOrderTacosBrowserTest {
         assertThat(browser.getCurrentUrl()).isEqualTo(orderDetailsPageUrl());
 
         List<String> validationErrors = getValidationErrorTexts();
-        assertThat(validationErrors.size()).isEqualTo(9);
-        assertThat(validationErrors).containsExactlyInAnyOrder(
-            "Please correct the problems below and resubmit.",
-            "Delivery name is required",
-            "Street is required",
-            "City is required",
-            "State is required",
-            "Zip code is required",
-            "Not a valid credit card number",
-            "Must be formatted MM/YY",
-            "Invalid CVV"
-        );
+        assertThat(validationErrors)
+            .hasSize(9)
+            .contains(
+                "Please correct the problems below and resubmit.",
+                "Delivery name is required",
+                "Street is required",
+                "City is required",
+                "State is required",
+                "Zip code is required",
+                "Not a valid credit card number",
+                "Must be formatted MM/YY",
+                "Invalid CVV");
     }
 
     private List<String> getValidationErrorTexts() {
@@ -182,13 +185,13 @@ public class DesignAndOrderTacosBrowserTest {
         assertThat(browser.getCurrentUrl()).isEqualTo(orderDetailsPageUrl());
 
         List<String> validationErrors = getValidationErrorTexts();
-        assertThat(validationErrors.size()).isEqualTo(4);
-        assertThat(validationErrors).containsExactlyInAnyOrder(
-            "Please correct the problems below and resubmit.",
-            "Not a valid credit card number",
-            "Must be formatted MM/YY",
-            "Invalid CVV"
-        );
+        assertThat(validationErrors)
+            .hasSize(4)
+            .contains(
+                "Please correct the problems below and resubmit.",
+                "Not a valid credit card number",
+                "Must be formatted MM/YY",
+                "Invalid CVV");
     }
 
     private void fillField(String fieldName, String value) {
@@ -197,16 +200,11 @@ public class DesignAndOrderTacosBrowserTest {
         field.sendKeys(value);
     }
 
-    private void assertIngredient(WebElement ingredientGroup,
-                                  int ingredientIdx, String id, String name) {
+    private void assertIngredient(WebElement ingredientGroup, int ingredientIdx, String id, String name) {
         List<WebElement> proteins = ingredientGroup.findElements(By.tagName("div"));
         WebElement ingredient = proteins.get(ingredientIdx);
-        assertThat(
-            ingredient.findElement(By.tagName("input")).getAttribute("value"))
-            .isEqualTo(id);
-        assertThat(
-            ingredient.findElement(By.tagName("span")).getText())
-            .isEqualTo(name);
+        assertThat(ingredient.findElement(By.tagName("input")).getAttribute("value")).isEqualTo(id);
+        assertThat(ingredient.findElement(By.tagName("span")).getText()).isEqualTo(name);
     }
 
     private void clickDesignATaco() {
@@ -219,16 +217,8 @@ public class DesignAndOrderTacosBrowserTest {
         browser.findElementByCssSelector("a[id='another']").click();
     }
 
-
-    //
-    // URL helper methods
-    //
     private String designPageUrl() {
         return homePageUrl() + "design";
-    }
-
-    private String homePageUrl() {
-        return "http://localhost:" + port + "/";
     }
 
     private String orderDetailsPageUrl() {
@@ -237,6 +227,10 @@ public class DesignAndOrderTacosBrowserTest {
 
     private String currentOrderDetailsPageUrl() {
         return homePageUrl() + "orders/current";
+    }
+
+    private String homePageUrl() {
+        return "http://localhost:" + port + "/";
     }
 
 }

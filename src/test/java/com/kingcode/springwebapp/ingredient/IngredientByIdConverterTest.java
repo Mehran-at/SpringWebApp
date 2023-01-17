@@ -1,5 +1,6 @@
 package com.kingcode.springwebapp.ingredient;
 
+import com.kingcode.springwebapp.ingredient.Ingredient.Type;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -9,8 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-
-class IngredientByIdConverterTest {
+public class IngredientByIdConverterTest {
 
     private IngredientByIdConverter converter;
 
@@ -18,7 +18,7 @@ class IngredientByIdConverterTest {
     public void setup() {
         IngredientRepository ingredientRepo = mock(IngredientRepository.class);
         when(ingredientRepo.findById("AAAA"))
-            .thenReturn(Optional.of(new Ingredient("AAAA", "TEST INGREDIENT", Ingredient.Type.CHEESE)));
+            .thenReturn(Optional.of(new Ingredient("AAAA", "TEST INGREDIENT", Type.CHEESE)));
         when(ingredientRepo.findById("ZZZZ"))
             .thenReturn(Optional.empty());
 
@@ -28,7 +28,7 @@ class IngredientByIdConverterTest {
     @Test
     public void shouldReturnValueWhenPresent() {
         assertThat(converter.convert("AAAA"))
-            .isEqualTo(new Ingredient("AAAA", "TEST INGREDIENT", Ingredient.Type.CHEESE));
+            .isEqualTo(new Ingredient("AAAA", "TEST INGREDIENT", Type.CHEESE));
     }
 
     @Test
