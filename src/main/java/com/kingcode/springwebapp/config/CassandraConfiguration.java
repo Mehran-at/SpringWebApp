@@ -36,8 +36,6 @@ public class CassandraConfiguration {
         CqlSessionFactoryBean session = new CqlSessionFactoryBean();
         session.setContactPoints("localhost");
         session.setKeyspaceName("tacocloud");
-//        session.setUsername("cassandra");
-//        session.setPassword("cassandra");
         session.setLocalDatacenter("datacenter1");
         return session;
     }
