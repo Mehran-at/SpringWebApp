@@ -1,2 +1,0 @@
-If you have Docker installed on your machine, an easy way to get a MongoDB server running is with the following command line:
-$ docker run -p 27017:27017 -d mongo:latest

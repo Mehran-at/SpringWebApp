@@ -5,6 +5,7 @@ import com.kingcode.springwebapp.ingredient.Ingredient.Type;
 import com.kingcode.springwebapp.ingredient.IngredientRepository;
 import com.kingcode.springwebapp.taco.Taco;
 import com.kingcode.springwebapp.tacoorder.TacoOrder;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,25 +22,19 @@ import java.util.stream.Collectors;
 @Controller
 @RequestMapping("/design")
 @SessionAttributes("tacoOrder")
+@RequiredArgsConstructor
 public class DesignTacoController {
 
     private final IngredientRepository ingredientRepo;
 
-    @Autowired
-    public DesignTacoController(
-        IngredientRepository ingredientRepo) {
-        this.ingredientRepo = ingredientRepo;
-    }
-
     @ModelAttribute
     public void addIngredientsToModel(Model model) {
         List<Ingredient> ingredients = new ArrayList<>();
-        ingredientRepo.findAll().forEach(i -> ingredients.add(i));
+        ingredientRepo.findAll().forEach(ingredients::add);
 
         Type[] types = Ingredient.Type.values();
         for (Type type : types) {
-            model.addAttribute(type.toString().toLowerCase(),
-                filterByType(ingredients, type));
+            model.addAttribute(type.toString().toLowerCase(), filterByType(ingredients, type));
         }
     }
 
@@ -59,14 +54,10 @@ public class DesignTacoController {
     }
 
     @PostMapping
-    public String processTaco(
-        @Valid Taco taco, Errors errors,
-        @ModelAttribute TacoOrder tacoOrder) {
-
+    public String processTaco(@Valid Taco taco, Errors errors, @ModelAttribute TacoOrder tacoOrder) {
         if (errors.hasErrors()) {
             return "design";
         }
-
         tacoOrder.addTaco(taco);
 
         return "redirect:/orders/current";
