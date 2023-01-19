@@ -1,43 +1,46 @@
 package com.kingcode.springwebapp.user;
 
-import lombok.*;
-import org.springframework.context.annotation.Bean;
-import org.springframework.data.mongodb.core.mapping.Document;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.ArrayList;
+import java.io.Serial;
+import java.util.Collection;
 import java.util.List;
 
-@Document
+@Entity
 @Data
-@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
+@NoArgsConstructor(force = true)
 @RequiredArgsConstructor
-@AllArgsConstructor
 public class User implements UserDetails {
 
+    @Serial
+    private static final long serialVersionUID = 1L;
+
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private final String username;
     private final String password;
-    private final List<SimpleGrantedAuthority> authorities;
+    private final String fullname;
+    private final String street;
+    private final String city;
+    private final String state;
+    private final String zip;
+    private final String phoneNumber;
 
-
-    @Bean
-    public InMemoryUserDetailsManager userDetailsService(PasswordEncoder encoder) {
-        List<UserDetails> usersList = new ArrayList<>();
-        usersList.add(new User(
-            "buzz", encoder.encode("password"),
-            List.of(new SimpleGrantedAuthority("ROLE_USER"))));
-        usersList.add(new User(
-            "woody", encoder.encode("password"),
-            List.of(new SimpleGrantedAuthority("ROLE_USER"))));
-        return new InMemoryUserDetailsManager(usersList);
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of(new SimpleGrantedAuthority("ROLE_USER"));
     }
-
 
     @Override
     public boolean isAccountNonExpired() {
@@ -58,5 +61,5 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
-}
 
+}

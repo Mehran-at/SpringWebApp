@@ -7,7 +7,11 @@
 
 <body>
 <h1>Welcome to...</h1>
-<img th:src="@{/images/spring_learning.jpg}"/>
+<img th:src="@{/images/spring-learning.jpg}"/>
+<form method="POST" th:action="@{/logout}" id="logoutForm">
+    <input type="submit" value="Logout"/>
+</form>
+
 <a th:href="@{/design}" id="design">Design a taco</a>
 </body>
 </html>

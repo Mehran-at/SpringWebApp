@@ -1,10 +1,28 @@
-# for production need to configure db
-#spring:
-#  data:
-#    mongodb:
-#      host: mongodb.tacocloud.com
-#      port: 27017
-#      username: tacocloud
-#      password: s3cr3tp455w0rd
-#      database: tacoclouddb
-#logging.level.org.springframework.jdbc.core.JdbcTemplate=debug
+spring:
+  datasource:
+    generate-unique-name: false
+    name: tacocloud
+  security:
+    oauth2:
+      client:
+        registration:
+          facebook:
+            clientId: ENC(K5JOip5MSB+uJu3mGBExQIv7+jVxi3S6lBqak+4QJgHROYB7pivs3WP28sBZg5fdf16KtMHG+scUVDWctzrJoA==)
+            clientSecret: ENC(rwg5TbSN9+Hb1NwnAbqiwF9FMQ1V0HANvouthV2aWHiSHHD9CeVWxTGOGsr7ybYbQKPv1SxIU8nuocL03Cc0UI+0VH2prjAPvyM/Jqu8Cq4=)
+            scope: email, public_profile
+---
+jasypt:
+  encryptor:
+    password: ${SPRING_WEB_APP}
+# You can obtain a client ID and secret by creating a new application entry at https://developers.facebook.com/.
+
+
+
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          <oauth2 or openid provider name>:
+#            clientId: <client id>
+#            clientSecret: <client secret>
+#            scope: <comma-separated list of requested scopes>
