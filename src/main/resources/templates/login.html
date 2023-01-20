@@ -17,6 +17,9 @@
 <p>New here? Click
   <a th:href="@{/register}">here</a> to register.</p>
 
+<p>Facebook login
+  <a th:href="@{/oauth2/authorization/facebook}">Sign in with Facebook</a> to register.</p>
+
 <!-- tag::thAction[] -->
 <form method="POST" th:action="@{/login}" id="loginForm">
   <!-- end::thAction[] -->
