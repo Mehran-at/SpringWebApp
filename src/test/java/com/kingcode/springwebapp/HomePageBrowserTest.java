@@ -14,7 +14,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import java.util.concurrent.TimeUnit;
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)
 public class HomePageBrowserTest {
 
     @LocalServerPort
@@ -40,14 +40,21 @@ public class HomePageBrowserTest {
         browser.get(homePage);
 
         String titleText = browser.getTitle();
-        Assertions.assertThat(titleText).isEqualTo("Taco Cloud");
+        Assertions.assertThat(titleText)
+            .isEqualTo("Taco Cloud");
 
-        String h1Text = browser.findElementByTagName("h1").getText();
-        Assertions.assertThat(h1Text).isEqualTo("Welcome to...");
+        String h1Text = browser
+            .findElementByTagName("h1")
+            .getText();
+        Assertions.assertThat(h1Text)
+            .isEqualTo("Welcome to...");
 
-
-        String imgSrc = browser.findElementByTagName("img")
+        String imgSrc = browser
+            .findElementByTagName("img")
             .getAttribute("src");
-        Assertions.assertThat(imgSrc).isEqualTo(homePage + "/images/spring_learning.jpg");
+        Assertions.assertThat(imgSrc)
+            .isEqualTo(homePage + "/images/spring-learning.jpg");
     }
+
+
 }

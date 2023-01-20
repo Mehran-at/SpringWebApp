@@ -89,7 +89,7 @@ public class DesignTacoControllerTest {
     }
 
     @Test
-    @WithMockUser(username = "testuser", password = "testpass")
+    @WithMockUser(username="testuser", password="testpass")
     public void testShowDesignForm() throws Exception {
         mockMvc.perform(get("/design"))
             .andExpect(status().isOk())
@@ -102,7 +102,7 @@ public class DesignTacoControllerTest {
     }
 
     @Test
-    @WithMockUser(username = "testuser", password = "testpass", authorities = "ROLE_USER")
+    @WithMockUser(username="testuser", password="testpass", authorities="ROLE_USER")
     public void processTaco() throws Exception {
         when(designRepository.save(design))
             .thenReturn(design);
