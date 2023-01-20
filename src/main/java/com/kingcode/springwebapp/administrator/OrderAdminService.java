@@ -2,18 +2,16 @@ package com.kingcode.springwebapp.administrator;
 
 import com.kingcode.springwebapp.tacoorder.TacoOrder;
 import com.kingcode.springwebapp.tacoorder.TacoOrderRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class OrderAdminService {
 
-    private TacoOrderRepository orderRepository;
-
-    public OrderAdminService(TacoOrderRepository orderRepository) {
-        this.orderRepository = orderRepository;
-    }
+    private final TacoOrderRepository orderRepository;
 
     @PreAuthorize("hasRole('ADMIN')")
     public void deleteAllOrders() {

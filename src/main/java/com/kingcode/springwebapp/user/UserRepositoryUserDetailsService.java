@@ -2,19 +2,17 @@ package com.kingcode.springwebapp.user;
 
 import com.kingcode.springwebapp.user.User;
 import com.kingcode.springwebapp.user.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class UserRepositoryUserDetailsService implements UserDetailsService {
 
-    private UserRepository userRepo;
-
-    public UserRepositoryUserDetailsService(UserRepository userRepo) {
-        this.userRepo = userRepo;
-    }
+    private final UserRepository userRepo;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
