@@ -13,11 +13,12 @@
 <div th:if="${error}">
   Unable to login. Check your username and password.
 </div>
+<div><p>login facebook<a th:href="@{/oauth2/authorization/facebook}">Sign in with Facebook</a></p>
+</div>
 
 <p>New here? Click
   <a th:href="@{/register}">here</a> to register.</p>
-<!--<p>login facebook-->
-<!--  <a th:href="/oauth2/authorization/facebook">Sign in with Facebook</a></p>-->
+
 
 <!-- tag::thAction[] -->
 <form method="POST" th:action="@{/login}" id="loginForm">
@@ -30,10 +31,6 @@
 
   <input type="submit" value="Login"/>
 </form>
-
-<!--<p>New here? Click-->
-<!--  <a th:href="/oauth2/authorization/facebook">Sign in with Facebook</a> to register.</p>-->
-
 </body>
 </html>
 <!-- end::all[] -->
