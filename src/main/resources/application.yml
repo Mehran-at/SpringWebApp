@@ -1,9 +1,9 @@
-spring:
-  data:
-    cassandra:
-      keyspace-name: tacocloud
-      schema-action: recreate
-      local-datacenter: datacenter1
+#spring:
+#  data:
+#    cassandra:
+#      keyspace-name: tacocloud
+#      schema-action: recreate
+#      local-datacenter: datacenter1
 #      username: tacocloud
 #      password: s3cr3tP455w0rd
 #      contact-points:
@@ -11,3 +11,12 @@ spring:
 #        - casshost-2.tacocloud.com
 #        - casshost-3.tacocloud.com
 #      port: 9043
+
+
+spring:
+  cassandra:
+  contact-points: 127.0.0.1
+  port: 9042
+  schema-action: recreate
+  local-datacenter: datacenter1
+  basic.load-balancing-policy.local-datacenter: datacenter1
