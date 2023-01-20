@@ -21,8 +21,7 @@ public class TacoOrderController {
     private final TacoOrderRepository orderRepo;
 
     @GetMapping("/current")
-    public String orderForm(@AuthenticationPrincipal User user,
-                            @ModelAttribute TacoOrder order) {
+    public String orderForm(@AuthenticationPrincipal User user, @ModelAttribute TacoOrder order) {
         if (order.getDeliveryName() == null) {
             order.setDeliveryName(user.getFullname());
         }
