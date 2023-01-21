@@ -6,8 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
 
 import javax.validation.Valid;
-import org.springframework.data.domain.Pageable;
 
 @Slf4j
 @Controller
@@ -24,12 +23,10 @@ import org.springframework.data.domain.Pageable;
 @SessionAttributes("order")
 @RequiredArgsConstructor
 @AllArgsConstructor
-@ConfigurationProperties(prefix = "taco.orders")
 @NoArgsConstructor(access = AccessLevel.PROTECTED, force = true)
 public class TacoOrderController {
 
-    private int pageSize = 20;
-
+    private OrderProps props;
     private final TacoOrderRepository orderRepo;
 
     @GetMapping("/current")
@@ -75,10 +72,10 @@ public class TacoOrderController {
     }
 
 
-//     to list the authenticated user’s past orders
+    //     to list the authenticated user’s past orders
     @GetMapping
     public String ordersForUser(@AuthenticationPrincipal User user, Model model) {
-        Pageable pageable = PageRequest.of(0, pageSize);
+        Pageable pageable = PageRequest.of(0, props.getPageSize());
         assert orderRepo != null;
         model.addAttribute("orders", orderRepo.findByUserOrderByPlacedAtDesc(user, pageable));
         return "orderList";
