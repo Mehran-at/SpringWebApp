@@ -251,3 +251,954 @@ Update your application's configuration
 2023-01-22 14:22:23.059 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/']
 2023-01-22 14:22:23.059 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/**']
 2023-01-22 14:22:23.074  INFO 13204 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3930ee45, org.springframework.security.web.context.SecurityContextPersistenceFilter@10732da9, org.springframework.security.web.header.HeaderWriterFilter@5e413dda, org.springframework.security.web.csrf.CsrfFilter@21b03f6f, org.springframework.security.web.authentication.logout.LogoutFilter@789ab11d, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@56df32ab, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@6902fd64, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@c2ef148, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d058692, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3454c9b9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25b81c83, org.springframework.security.web.session.SessionManagementFilter@2bbc666e, org.springframework.security.web.access.ExceptionTranslationFilter@24e1c63d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@742bdad2]
+2023-01-22 14:23:28.324 DEBUG 13204 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /login
+2023-01-22 14:23:28.333 DEBUG 13204 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:23:28.341 DEBUG 13204 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:23:28.342 DEBUG 13204 --- [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 21CED9EA597DC280C49DA2F9746F08E6
+2023-01-22 14:23:28.350 DEBUG 13204 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /login] with attributes [permitAll]
+2023-01-22 14:23:28.351 DEBUG 13204 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /login
+2023-01-22 14:23:29.032 DEBUG 13204 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:29.039 DEBUG 13204 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:29.039 DEBUG 13204 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:23:29.166 DEBUG 13204 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /images/TacoCloud.png
+2023-01-22 14:23:29.168 DEBUG 13204 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:23:29.169 DEBUG 13204 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:23:29.169 DEBUG 13204 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/TacoCloud.png] with attributes [permitAll]
+2023-01-22 14:23:29.170 DEBUG 13204 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /images/TacoCloud.png
+2023-01-22 14:23:29.179 DEBUG 13204 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:29.180 DEBUG 13204 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:29.181 DEBUG 13204 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:23:29.184 DEBUG 13204 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 14:23:29.185 DEBUG 13204 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:23:29.185 DEBUG 13204 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:23:29.185 DEBUG 13204 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 14:23:29.272 DEBUG 13204 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:29.275 DEBUG 13204 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:29.276 DEBUG 13204 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:23:30.849 DEBUG 13204 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2023-01-22 14:23:30.850 DEBUG 13204 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:23:30.850 DEBUG 13204 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:23:30.851 DEBUG 13204 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /favicon.ico] with attributes [permitAll]
+2023-01-22 14:23:30.851 DEBUG 13204 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2023-01-22 14:23:30.856 DEBUG 13204 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:30.856 DEBUG 13204 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:30.856 DEBUG 13204 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:23:30.857 DEBUG 13204 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 14:23:30.857 DEBUG 13204 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:23:30.857 DEBUG 13204 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:23:30.858 DEBUG 13204 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 14:23:30.879 DEBUG 13204 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:30.882 DEBUG 13204 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:30.882 DEBUG 13204 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:23:50.084 DEBUG 13204 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /login
+2023-01-22 14:23:50.085 DEBUG 13204 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:23:50.085 DEBUG 13204 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:23:50.086 DEBUG 13204 --- [http-nio-8080-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /login] with attributes [permitAll]
+2023-01-22 14:23:50.086 DEBUG 13204 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /login
+2023-01-22 14:23:50.093 DEBUG 13204 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:50.094 DEBUG 13204 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:50.094 DEBUG 13204 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:23:50.142 DEBUG 13204 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /images/TacoCloud.png
+2023-01-22 14:23:50.144 DEBUG 13204 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:23:50.144 DEBUG 13204 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:23:50.144 DEBUG 13204 --- [http-nio-8080-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/TacoCloud.png] with attributes [permitAll]
+2023-01-22 14:23:50.144 DEBUG 13204 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /images/TacoCloud.png
+2023-01-22 14:23:50.150 DEBUG 13204 --- [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:50.151 DEBUG 13204 --- [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:50.151 DEBUG 13204 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:23:50.151 DEBUG 13204 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 14:23:50.151 DEBUG 13204 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:23:50.151 DEBUG 13204 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:23:50.151 DEBUG 13204 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 14:23:50.155 DEBUG 13204 --- [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:50.157 DEBUG 13204 --- [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:50.159 DEBUG 13204 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:23:53.658 DEBUG 13204 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /login
+2023-01-22 14:23:53.659 DEBUG 13204 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:23:53.659 DEBUG 13204 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:23:53.659 DEBUG 13204 --- [http-nio-8080-exec-10] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /login] with attributes [permitAll]
+2023-01-22 14:23:53.659 DEBUG 13204 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /login
+2023-01-22 14:23:53.665 DEBUG 13204 --- [http-nio-8080-exec-10] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:53.667 DEBUG 13204 --- [http-nio-8080-exec-10] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:53.667 DEBUG 13204 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:23:53.739 DEBUG 13204 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /images/TacoCloud.png
+2023-01-22 14:23:53.739 DEBUG 13204 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:23:53.740 DEBUG 13204 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:23:53.740 DEBUG 13204 --- [http-nio-8080-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/TacoCloud.png] with attributes [permitAll]
+2023-01-22 14:23:53.741 DEBUG 13204 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /images/TacoCloud.png
+2023-01-22 14:23:53.744 DEBUG 13204 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:53.744 DEBUG 13204 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:53.744 DEBUG 13204 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:23:53.745 DEBUG 13204 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 14:23:53.745 DEBUG 13204 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:23:53.745 DEBUG 13204 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:23:53.746 DEBUG 13204 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 14:23:53.748 DEBUG 13204 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:53.753 DEBUG 13204 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:53.753 DEBUG 13204 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:23:54.821 DEBUG 13204 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /login
+2023-01-22 14:23:54.822 DEBUG 13204 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:23:54.822 DEBUG 13204 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:23:54.822 DEBUG 13204 --- [http-nio-8080-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /login] with attributes [permitAll]
+2023-01-22 14:23:54.822 DEBUG 13204 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /login
+2023-01-22 14:23:54.826 DEBUG 13204 --- [http-nio-8080-exec-5] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:54.827 DEBUG 13204 --- [http-nio-8080-exec-5] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:54.827 DEBUG 13204 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:23:54.882 DEBUG 13204 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /images/TacoCloud.png
+2023-01-22 14:23:54.882 DEBUG 13204 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:23:54.883 DEBUG 13204 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:23:54.883 DEBUG 13204 --- [http-nio-8080-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/TacoCloud.png] with attributes [permitAll]
+2023-01-22 14:23:54.883 DEBUG 13204 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /images/TacoCloud.png
+2023-01-22 14:23:54.886 DEBUG 13204 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:54.887 DEBUG 13204 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:54.887 DEBUG 13204 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:23:54.888 DEBUG 13204 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 14:23:54.889 DEBUG 13204 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:23:54.889 DEBUG 13204 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:23:54.889 DEBUG 13204 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 14:23:54.891 DEBUG 13204 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:54.892 DEBUG 13204 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:23:54.893 DEBUG 13204 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:24:12.111 DEBUG 13204 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /login
+2023-01-22 14:24:12.112 DEBUG 13204 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:24:12.418 DEBUG 13204 --- [http-nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to find user 'buzz'
+2023-01-22 14:24:12.419 DEBUG 13204 --- [http-nio-8080-exec-6] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /login?error
+2023-01-22 14:24:12.420 DEBUG 13204 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Did not store empty SecurityContext
+2023-01-22 14:24:12.420 DEBUG 13204 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Did not store empty SecurityContext
+2023-01-22 14:24:12.420 DEBUG 13204 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:24:12.435 DEBUG 13204 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /login?error
+2023-01-22 14:24:12.436 DEBUG 13204 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:24:12.436 DEBUG 13204 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:24:12.436 DEBUG 13204 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /login?error] with attributes [permitAll]
+2023-01-22 14:24:12.436 DEBUG 13204 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /login?error
+2023-01-22 14:24:12.440 DEBUG 13204 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:24:12.441 DEBUG 13204 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:24:12.441 DEBUG 13204 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:24:12.494 DEBUG 13204 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /images/TacoCloud.png
+2023-01-22 14:24:12.495 DEBUG 13204 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:24:12.495 DEBUG 13204 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:24:12.495 DEBUG 13204 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/TacoCloud.png] with attributes [permitAll]
+2023-01-22 14:24:12.496 DEBUG 13204 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /images/TacoCloud.png
+2023-01-22 14:24:12.499 DEBUG 13204 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:24:12.500 DEBUG 13204 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:24:12.500 DEBUG 13204 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:24:12.501 DEBUG 13204 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 14:24:12.501 DEBUG 13204 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:24:12.501 DEBUG 13204 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:24:12.502 DEBUG 13204 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 14:24:12.504 DEBUG 13204 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:24:12.507 DEBUG 13204 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:24:12.508 DEBUG 13204 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:31:29.913  WARN 13204 --- [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2023-01-22 14:31:31.693 DEBUG 13204 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PostAuthorize("hasRole(\'ADMIN\') || returnObject.user.username == authentication.name") found on specific method: public com.kingcode.springwebapp.tacoorder.TacoOrder com.kingcode.springwebapp.administrator.OrderAdminService.getOrder(long)
+2023-01-22 14:31:31.694 DEBUG 13204 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.kingcode.springwebapp.administrator.OrderAdminService; public com.kingcode.springwebapp.tacoorder.TacoOrder com.kingcode.springwebapp.administrator.OrderAdminService.getOrder(long)]] with attributes [[authorize: 'permitAll', filter: 'null', filterTarget: 'null'], [authorize: 'hasRole('ADMIN') || returnObject.user.username == authentication.name', filter: 'null']]
+2023-01-22 14:31:31.698 DEBUG 13204 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ADMIN\')") found on specific method: public void com.kingcode.springwebapp.administrator.OrderAdminService.deleteAllOrders()
+2023-01-22 14:31:31.698 DEBUG 13204 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.kingcode.springwebapp.administrator.OrderAdminService; public void com.kingcode.springwebapp.administrator.OrderAdminService.deleteAllOrders()]] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-01-22 14:31:31.728  WARN 13204 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-22 14:31:32.295 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ADMIN')] for Ant [pattern='/admin/**', POST]
+2023-01-22 14:31:32.296 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('USER')] for Ant [pattern='/design']
+2023-01-22 14:31:32.296 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('USER')] for Ant [pattern='/orders']
+2023-01-22 14:31:32.296 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/']
+2023-01-22 14:31:32.296 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/**']
+2023-01-22 14:31:32.310  INFO 13204 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@22ba6df2, org.springframework.security.web.context.SecurityContextPersistenceFilter@38885110, org.springframework.security.web.header.HeaderWriterFilter@43d453c7, org.springframework.security.web.csrf.CsrfFilter@79eec8df, org.springframework.security.web.authentication.logout.LogoutFilter@317224c9, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@48b3f9a2, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1b0f700b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@34b61ca4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@452c7365, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24875a6c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@266d163d, org.springframework.security.web.session.SessionManagementFilter@37afcf0a, org.springframework.security.web.access.ExceptionTranslationFilter@34392c08, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7b18428a]
+2023-01-22 14:31:37.723  WARN 5928 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-01-22 14:31:37.759 ERROR 5928 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userDetailsService in com.kingcode.springwebapp.config.SecurityConfiguration required a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' in your configuration.
+
+2023-01-22 14:31:37.771 ERROR 5928 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2205a05d] to prepare test instance [com.kingcode.springwebapp.HomeControllerTest@153d6d74]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:110) ~[spring-boot-test-2.5.3.jar:2.5.3]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:94) ~[spring-boot-test-2.5.3.jar:2.5.3]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:61) ~[spring-boot-test-2.5.3.jar:2.5.3]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123) ~[spring-boot-test-2.5.3.jar:2.5.3]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.3.9.jar:5.3.9]
+	... 70 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1790) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1346) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 89 common frames omitted
+
+2023-01-22 14:32:18.416  WARN 13204 --- [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2023-01-22 14:32:19.885 DEBUG 13204 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PostAuthorize("hasRole(\'ADMIN\') || returnObject.user.username == authentication.name") found on specific method: public com.kingcode.springwebapp.tacoorder.TacoOrder com.kingcode.springwebapp.administrator.OrderAdminService.getOrder(long)
+2023-01-22 14:32:19.886 DEBUG 13204 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.kingcode.springwebapp.administrator.OrderAdminService; public com.kingcode.springwebapp.tacoorder.TacoOrder com.kingcode.springwebapp.administrator.OrderAdminService.getOrder(long)]] with attributes [[authorize: 'permitAll', filter: 'null', filterTarget: 'null'], [authorize: 'hasRole('ADMIN') || returnObject.user.username == authentication.name', filter: 'null']]
+2023-01-22 14:32:19.889 DEBUG 13204 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ADMIN\')") found on specific method: public void com.kingcode.springwebapp.administrator.OrderAdminService.deleteAllOrders()
+2023-01-22 14:32:19.890 DEBUG 13204 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.kingcode.springwebapp.administrator.OrderAdminService; public void com.kingcode.springwebapp.administrator.OrderAdminService.deleteAllOrders()]] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-01-22 14:32:19.924  WARN 13204 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-22 14:32:20.372 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ADMIN')] for Ant [pattern='/admin/**', POST]
+2023-01-22 14:32:20.373 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('USER')] for Ant [pattern='/design']
+2023-01-22 14:32:20.373 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('USER')] for Ant [pattern='/orders']
+2023-01-22 14:32:20.373 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/']
+2023-01-22 14:32:20.373 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/**']
+2023-01-22 14:32:20.386  INFO 13204 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11c11bd6, org.springframework.security.web.context.SecurityContextPersistenceFilter@64541f17, org.springframework.security.web.header.HeaderWriterFilter@6881e4d, org.springframework.security.web.csrf.CsrfFilter@3e128839, org.springframework.security.web.authentication.logout.LogoutFilter@52ea38b3, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@9709854, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@7708a1b6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@d20f136, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@dece496, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4bd0f910, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1be2f199, org.springframework.security.web.session.SessionManagementFilter@3ebc7677, org.springframework.security.web.access.ExceptionTranslationFilter@4dee9cd8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@78f3cb9a]
+2023-01-22 14:32:27.037  WARN 20204 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController' defined in file [C:\Users\Mehran Hosseini\Desktop\SpringWebAppWithControllerTest\target\classes\com\kingcode\springwebapp\administrator\AdminController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.kingcode.springwebapp.administrator.OrderAdminService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-01-22 14:32:27.082 ERROR 20204 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.kingcode.springwebapp.administrator.AdminController required a bean of type 'com.kingcode.springwebapp.administrator.OrderAdminService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.kingcode.springwebapp.administrator.OrderAdminService' in your configuration.
+
+2023-01-22 14:32:27.091 ERROR 20204 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@23202fce] to prepare test instance [com.kingcode.springwebapp.HomeControllerTest@3dbd7107]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:110) ~[spring-boot-test-2.5.3.jar:2.5.3]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:94) ~[spring-boot-test-2.5.3.jar:2.5.3]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:61) ~[spring-boot-test-2.5.3.jar:2.5.3]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController' defined in file [C:\Users\Mehran Hosseini\Desktop\SpringWebAppWithControllerTest\target\classes\com\kingcode\springwebapp\administrator\AdminController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.kingcode.springwebapp.administrator.OrderAdminService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123) ~[spring-boot-test-2.5.3.jar:2.5.3]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.3.9.jar:5.3.9]
+	... 70 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.kingcode.springwebapp.administrator.OrderAdminService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1790) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1346) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 88 common frames omitted
+
+2023-01-22 14:33:26.099  WARN 13204 --- [Thread-12] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2023-01-22 14:33:27.921 DEBUG 13204 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PostAuthorize("hasRole(\'ADMIN\') || returnObject.user.username == authentication.name") found on specific method: public com.kingcode.springwebapp.tacoorder.TacoOrder com.kingcode.springwebapp.administrator.OrderAdminService.getOrder(long)
+2023-01-22 14:33:27.921 DEBUG 13204 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.kingcode.springwebapp.administrator.OrderAdminService; public com.kingcode.springwebapp.tacoorder.TacoOrder com.kingcode.springwebapp.administrator.OrderAdminService.getOrder(long)]] with attributes [[authorize: 'permitAll', filter: 'null', filterTarget: 'null'], [authorize: 'hasRole('ADMIN') || returnObject.user.username == authentication.name', filter: 'null']]
+2023-01-22 14:33:27.925 DEBUG 13204 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ADMIN\')") found on specific method: public void com.kingcode.springwebapp.administrator.OrderAdminService.deleteAllOrders()
+2023-01-22 14:33:27.926 DEBUG 13204 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.kingcode.springwebapp.administrator.OrderAdminService; public void com.kingcode.springwebapp.administrator.OrderAdminService.deleteAllOrders()]] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-01-22 14:33:27.966  WARN 13204 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-22 14:33:28.533 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ADMIN')] for Ant [pattern='/admin/**', POST]
+2023-01-22 14:33:28.534 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('USER')] for Ant [pattern='/design']
+2023-01-22 14:33:28.534 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('USER')] for Ant [pattern='/orders']
+2023-01-22 14:33:28.534 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/']
+2023-01-22 14:33:28.534 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/**']
+2023-01-22 14:33:28.550  INFO 13204 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1610ff85, org.springframework.security.web.context.SecurityContextPersistenceFilter@60d8b278, org.springframework.security.web.header.HeaderWriterFilter@6cdb4df6, org.springframework.security.web.csrf.CsrfFilter@271d2a5f, org.springframework.security.web.authentication.logout.LogoutFilter@2c4047f1, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@2ba0bab3, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@649a4342, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@77328ccc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5843f261, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ec1b062, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75a75567, org.springframework.security.web.session.SessionManagementFilter@2ed92a2e, org.springframework.security.web.access.ExceptionTranslationFilter@5c9c87ed, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@133c289c]
+2023-01-22 14:33:35.748  WARN 11448 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-01-22 14:33:35.787 ERROR 11448 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userDetailsService in com.kingcode.springwebapp.config.SecurityConfiguration required a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' in your configuration.
+
+2023-01-22 14:33:35.796 ERROR 11448 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7f284218] to prepare test instance [com.kingcode.springwebapp.DesignTacoControllerTest@582e9152]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:110) ~[spring-boot-test-2.5.3.jar:2.5.3]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:94) ~[spring-boot-test-2.5.3.jar:2.5.3]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:61) ~[spring-boot-test-2.5.3.jar:2.5.3]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123) ~[spring-boot-test-2.5.3.jar:2.5.3]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.3.9.jar:5.3.9]
+	... 70 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1790) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1346) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 89 common frames omitted
+
+2023-01-22 14:33:36.589  WARN 11448 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-01-22 14:33:36.593 ERROR 11448 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userDetailsService in com.kingcode.springwebapp.config.SecurityConfiguration required a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' in your configuration.
+
+2023-01-22 14:33:36.595 ERROR 11448 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7f284218] to prepare test instance [com.kingcode.springwebapp.DesignTacoControllerTest@c9b5a99]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:110) ~[spring-boot-test-2.5.3.jar:2.5.3]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:94) ~[spring-boot-test-2.5.3.jar:2.5.3]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:61) ~[spring-boot-test-2.5.3.jar:2.5.3]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65) ~[junit-jupiter-engine-5.7.2.jar:5.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75) ~[junit-platform-launcher-1.7.2.jar:1.7.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123) ~[spring-boot-test-2.5.3.jar:2.5.3]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.3.9.jar:5.3.9]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.3.9.jar:5.3.9]
+	... 70 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1790) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1346) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 89 common frames omitted
+
+2023-01-22 14:34:58.190  WARN 13204 --- [Thread-16] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2023-01-22 14:34:59.912 DEBUG 13204 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PostAuthorize("hasRole(\'ADMIN\') || returnObject.user.username == authentication.name") found on specific method: public com.kingcode.springwebapp.tacoorder.TacoOrder com.kingcode.springwebapp.administrator.OrderAdminService.getOrder(long)
+2023-01-22 14:34:59.913 DEBUG 13204 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.kingcode.springwebapp.administrator.OrderAdminService; public com.kingcode.springwebapp.tacoorder.TacoOrder com.kingcode.springwebapp.administrator.OrderAdminService.getOrder(long)]] with attributes [[authorize: 'permitAll', filter: 'null', filterTarget: 'null'], [authorize: 'hasRole('ADMIN') || returnObject.user.username == authentication.name', filter: 'null']]
+2023-01-22 14:34:59.917 DEBUG 13204 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ADMIN\')") found on specific method: public void com.kingcode.springwebapp.administrator.OrderAdminService.deleteAllOrders()
+2023-01-22 14:34:59.917 DEBUG 13204 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.kingcode.springwebapp.administrator.OrderAdminService; public void com.kingcode.springwebapp.administrator.OrderAdminService.deleteAllOrders()]] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-01-22 14:34:59.960  WARN 13204 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-22 14:35:00.727 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ADMIN')] for Ant [pattern='/admin/**', POST]
+2023-01-22 14:35:00.727 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('USER')] for Ant [pattern='/design']
+2023-01-22 14:35:00.728 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('USER')] for Ant [pattern='/orders']
+2023-01-22 14:35:00.728 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/']
+2023-01-22 14:35:00.728 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/**']
+2023-01-22 14:35:00.748  INFO 13204 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2af0ad77, org.springframework.security.web.context.SecurityContextPersistenceFilter@655b7d5, org.springframework.security.web.header.HeaderWriterFilter@3c4d17d2, org.springframework.security.web.csrf.CsrfFilter@53e36b73, org.springframework.security.web.authentication.logout.LogoutFilter@1112414b, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@3a6e4f66, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@381bcba6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2db0ee93, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f9da866, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5bbacdc0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@9e1acc, org.springframework.security.web.session.SessionManagementFilter@4ea5e581, org.springframework.security.web.access.ExceptionTranslationFilter@2a7476b7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4cbbc84a]
+2023-01-22 14:35:12.190 DEBUG 10592 --- [main] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PostAuthorize("hasRole(\'ADMIN\') || returnObject.user.username == authentication.name") found on specific method: public com.kingcode.springwebapp.tacoorder.TacoOrder com.kingcode.springwebapp.administrator.OrderAdminService.getOrder(long)
+2023-01-22 14:35:12.238 DEBUG 10592 --- [main] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.kingcode.springwebapp.administrator.OrderAdminService; public com.kingcode.springwebapp.tacoorder.TacoOrder com.kingcode.springwebapp.administrator.OrderAdminService.getOrder(long)]] with attributes [[authorize: 'permitAll', filter: 'null', filterTarget: 'null'], [authorize: 'hasRole('ADMIN') || returnObject.user.username == authentication.name', filter: 'null']]
+2023-01-22 14:35:12.314 DEBUG 10592 --- [main] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ADMIN\')") found on specific method: public void com.kingcode.springwebapp.administrator.OrderAdminService.deleteAllOrders()
+2023-01-22 14:35:12.314 DEBUG 10592 --- [main] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.kingcode.springwebapp.administrator.OrderAdminService; public void com.kingcode.springwebapp.administrator.OrderAdminService.deleteAllOrders()]] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-01-22 14:35:12.547  WARN 10592 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-22 14:35:16.023 DEBUG 10592 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ADMIN')] for Ant [pattern='/admin/**', POST]
+2023-01-22 14:35:16.024 DEBUG 10592 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('USER')] for Ant [pattern='/design']
+2023-01-22 14:35:16.025 DEBUG 10592 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('USER')] for Ant [pattern='/orders']
+2023-01-22 14:35:16.026 DEBUG 10592 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/']
+2023-01-22 14:35:16.026 DEBUG 10592 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/**']
+2023-01-22 14:35:16.115  INFO 10592 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@116f823c, org.springframework.security.web.context.SecurityContextPersistenceFilter@2625eb84, org.springframework.security.web.header.HeaderWriterFilter@38d1c7d2, org.springframework.security.web.csrf.CsrfFilter@2cb09f00, org.springframework.security.web.authentication.logout.LogoutFilter@4c58212, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@4a3d4cd2, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@6bcf2780, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@d56d9f6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35216a2e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4cbf1c30, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f5a5ef3, org.springframework.security.web.session.SessionManagementFilter@7262532a, org.springframework.security.web.access.ExceptionTranslationFilter@41843b88, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25c3a441]
+2023-01-22 14:35:18.082 DEBUG 10592 --- [http-nio-auto-1-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /
+2023-01-22 14:35:18.089 DEBUG 10592 --- [http-nio-auto-1-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:35:18.095 DEBUG 10592 --- [http-nio-auto-1-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:35:18.103 DEBUG 10592 --- [http-nio-auto-1-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /] with attributes [permitAll]
+2023-01-22 14:35:18.104 DEBUG 10592 --- [http-nio-auto-1-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /
+2023-01-22 14:35:18.675 DEBUG 10592 --- [http-nio-auto-1-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:35:18.680 DEBUG 10592 --- [http-nio-auto-1-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:35:18.681 DEBUG 10592 --- [http-nio-auto-1-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:18.935 DEBUG 10592 --- [http-nio-auto-1-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /design
+2023-01-22 14:35:18.935 DEBUG 10592 --- [http-nio-auto-1-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:35:18.935 DEBUG 10592 --- [http-nio-auto-1-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:35:18.936 DEBUG 10592 --- [http-nio-auto-1-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /design] with attributes [hasRole('USER')]
+2023-01-22 14:35:18.942 DEBUG 10592 --- [http-nio-auto-1-exec-2] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:51263/design to session
+2023-01-22 14:35:18.944 DEBUG 10592 --- [http-nio-auto-1-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@209baf91, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]
+2023-01-22 14:35:18.944 DEBUG 10592 --- [http-nio-auto-1-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : Match found! Executing org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint@631bb90c
+2023-01-22 14:35:18.944 DEBUG 10592 --- [http-nio-auto-1-exec-2] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:51263/login
+2023-01-22 14:35:18.945 DEBUG 10592 --- [http-nio-auto-1-exec-2] w.c.HttpSessionSecurityContextRepository : Did not store empty SecurityContext
+2023-01-22 14:35:18.946 DEBUG 10592 --- [http-nio-auto-1-exec-2] w.c.HttpSessionSecurityContextRepository : Did not store empty SecurityContext
+2023-01-22 14:35:18.946 DEBUG 10592 --- [http-nio-auto-1-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:18.950 DEBUG 10592 --- [http-nio-auto-1-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /login
+2023-01-22 14:35:18.950 DEBUG 10592 --- [http-nio-auto-1-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:35:18.951 DEBUG 10592 --- [http-nio-auto-1-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:35:18.951 DEBUG 10592 --- [http-nio-auto-1-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /login] with attributes [permitAll]
+2023-01-22 14:35:18.951 DEBUG 10592 --- [http-nio-auto-1-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /login
+2023-01-22 14:35:18.965 DEBUG 10592 --- [http-nio-auto-1-exec-3] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:35:18.967 DEBUG 10592 --- [http-nio-auto-1-exec-3] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:35:18.967 DEBUG 10592 --- [http-nio-auto-1-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:19.006 DEBUG 10592 --- [http-nio-auto-1-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /register
+2023-01-22 14:35:19.006 DEBUG 10592 --- [http-nio-auto-1-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:35:19.007 DEBUG 10592 --- [http-nio-auto-1-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:35:19.007 DEBUG 10592 --- [http-nio-auto-1-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /register] with attributes [permitAll]
+2023-01-22 14:35:19.007 DEBUG 10592 --- [http-nio-auto-1-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /register
+2023-01-22 14:35:19.040 DEBUG 10592 --- [http-nio-auto-1-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:35:19.042 DEBUG 10592 --- [http-nio-auto-1-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:35:19.042 DEBUG 10592 --- [http-nio-auto-1-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:19.089 DEBUG 10592 --- [http-nio-auto-1-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /register
+2023-01-22 14:35:19.090 DEBUG 10592 --- [http-nio-auto-1-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:35:19.091 DEBUG 10592 --- [http-nio-auto-1-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:35:19.091 DEBUG 10592 --- [http-nio-auto-1-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /register] with attributes [permitAll]
+2023-01-22 14:35:19.092 DEBUG 10592 --- [http-nio-auto-1-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /register
+2023-01-22 14:35:19.245 DEBUG 10592 --- [http-nio-auto-1-exec-5] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:35:19.246 DEBUG 10592 --- [http-nio-auto-1-exec-5] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:35:19.247 DEBUG 10592 --- [http-nio-auto-1-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:19.252 DEBUG 10592 --- [http-nio-auto-1-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /login
+2023-01-22 14:35:19.252 DEBUG 10592 --- [http-nio-auto-1-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:35:19.252 DEBUG 10592 --- [http-nio-auto-1-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 14:35:19.254 DEBUG 10592 --- [http-nio-auto-1-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /login] with attributes [permitAll]
+2023-01-22 14:35:19.254 DEBUG 10592 --- [http-nio-auto-1-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /login
+2023-01-22 14:35:19.258 DEBUG 10592 --- [http-nio-auto-1-exec-6] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:35:19.260 DEBUG 10592 --- [http-nio-auto-1-exec-6] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 14:35:19.261 DEBUG 10592 --- [http-nio-auto-1-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:19.288 DEBUG 10592 --- [http-nio-auto-1-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /login
+2023-01-22 14:35:19.288 DEBUG 10592 --- [http-nio-auto-1-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 14:35:19.621 DEBUG 10592 --- [http-nio-auto-1-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-01-22 14:35:19.622 DEBUG 10592 --- [http-nio-auto-1-exec-7] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from AC93626A83AE7C876091768F73DE7321
+2023-01-22 14:35:19.624 DEBUG 10592 --- [http-nio-auto-1-exec-7] o.s.s.w.csrf.CsrfAuthenticationStrategy  : Replaced CSRF Token
+2023-01-22 14:35:19.643 DEBUG 10592 --- [http-nio-auto-1-exec-7] w.a.UsernamePasswordAuthenticationFilter : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]
+2023-01-22 14:35:19.645 DEBUG 10592 --- [http-nio-auto-1-exec-7] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:51263/design
+2023-01-22 14:35:19.646 DEBUG 10592 --- [http-nio-auto-1-exec-7] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@36db51e]
+2023-01-22 14:35:19.647 DEBUG 10592 --- [http-nio-auto-1-exec-7] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@36db51e]
+2023-01-22 14:35:19.647 DEBUG 10592 --- [http-nio-auto-1-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:19.655 DEBUG 10592 --- [http-nio-auto-1-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /design
+2023-01-22 14:35:19.656 DEBUG 10592 --- [http-nio-auto-1-exec-8] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:19.657 DEBUG 10592 --- [http-nio-auto-1-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:19.658 DEBUG 10592 --- [http-nio-auto-1-exec-8] o.s.s.w.s.HttpSessionRequestCache        : Loaded matching saved request http://localhost:51263/design
+2023-01-22 14:35:19.660 DEBUG 10592 --- [http-nio-auto-1-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /design] with attributes [hasRole('USER')]
+2023-01-22 14:35:19.660 DEBUG 10592 --- [http-nio-auto-1-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /design
+2023-01-22 14:35:19.779 DEBUG 10592 --- [http-nio-auto-1-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:19.805 DEBUG 10592 --- [http-nio-auto-1-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /styles.css
+2023-01-22 14:35:19.806 DEBUG 10592 --- [http-nio-auto-1-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:19.806 DEBUG 10592 --- [http-nio-auto-1-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:19.808 DEBUG 10592 --- [http-nio-auto-1-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /styles.css] with attributes [permitAll]
+2023-01-22 14:35:19.808 DEBUG 10592 --- [http-nio-auto-1-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /styles.css
+2023-01-22 14:35:19.849 DEBUG 10592 --- [http-nio-auto-1-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:19.976 DEBUG 10592 --- [http-nio-auto-1-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /design
+2023-01-22 14:35:19.978 DEBUG 10592 --- [http-nio-auto-1-exec-10] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:19.978 DEBUG 10592 --- [http-nio-auto-1-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:19.978 DEBUG 10592 --- [http-nio-auto-1-exec-10] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /design] with attributes [hasRole('USER')]
+2023-01-22 14:35:19.979 DEBUG 10592 --- [http-nio-auto-1-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /design
+2023-01-22 14:35:20.114 DEBUG 10592 --- [http-nio-auto-1-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:20.121 DEBUG 10592 --- [http-nio-auto-1-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /orders/current
+2023-01-22 14:35:20.122 DEBUG 10592 --- [http-nio-auto-1-exec-1] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:20.122 DEBUG 10592 --- [http-nio-auto-1-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:20.126 DEBUG 10592 --- [http-nio-auto-1-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /orders/current] with attributes [permitAll]
+2023-01-22 14:35:20.128 DEBUG 10592 --- [http-nio-auto-1-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /orders/current
+2023-01-22 14:35:20.204 DEBUG 10592 --- [http-nio-auto-1-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:20.274 DEBUG 10592 --- [http-nio-auto-1-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /styles.css
+2023-01-22 14:35:20.275 DEBUG 10592 --- [http-nio-auto-1-exec-2] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:20.275 DEBUG 10592 --- [http-nio-auto-1-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:20.277 DEBUG 10592 --- [http-nio-auto-1-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /styles.css] with attributes [permitAll]
+2023-01-22 14:35:20.277 DEBUG 10592 --- [http-nio-auto-1-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /styles.css
+2023-01-22 14:35:20.293 DEBUG 10592 --- [http-nio-auto-1-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:20.354 DEBUG 10592 --- [http-nio-auto-1-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /orders
+2023-01-22 14:35:20.354 DEBUG 10592 --- [http-nio-auto-1-exec-3] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:20.354 DEBUG 10592 --- [http-nio-auto-1-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:20.356 DEBUG 10592 --- [http-nio-auto-1-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /orders] with attributes [hasRole('USER')]
+2023-01-22 14:35:20.357 DEBUG 10592 --- [http-nio-auto-1-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /orders
+2023-01-22 14:35:20.451 DEBUG 10592 --- [http-nio-auto-1-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:20.656 DEBUG 10592 --- [http-nio-auto-1-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /styles.css
+2023-01-22 14:35:20.659 DEBUG 10592 --- [http-nio-auto-1-exec-4] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:20.661 DEBUG 10592 --- [http-nio-auto-1-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:20.663 DEBUG 10592 --- [http-nio-auto-1-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /styles.css] with attributes [permitAll]
+2023-01-22 14:35:20.664 DEBUG 10592 --- [http-nio-auto-1-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /styles.css
+2023-01-22 14:35:20.673 DEBUG 10592 --- [http-nio-auto-1-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:20.707 DEBUG 10592 --- [http-nio-auto-1-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /orders
+2023-01-22 14:35:20.708 DEBUG 10592 --- [http-nio-auto-1-exec-5] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:20.708 DEBUG 10592 --- [http-nio-auto-1-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:20.710 DEBUG 10592 --- [http-nio-auto-1-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /orders] with attributes [hasRole('USER')]
+2023-01-22 14:35:20.710 DEBUG 10592 --- [http-nio-auto-1-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /orders
+2023-01-22 14:35:20.718 DEBUG 10592 --- [http-nio-auto-1-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:20.730 ERROR 10592 --- [http-nio-auto-1-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed; nested exception is java.lang.AssertionError] with root cause
+
+java.lang.AssertionError: null
+	at com.kingcode.springwebapp.tacoorder.TacoOrderController.processOrder(TacoOrderController.java:67) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:178) ~[spring-security-oauth2-client-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:132) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.5.3.jar:2.5.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-01-22 14:35:20.737 DEBUG 10592 --- [http-nio-auto-1-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /error
+2023-01-22 14:35:20.737 DEBUG 10592 --- [http-nio-auto-1-exec-5] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:20.738 DEBUG 10592 --- [http-nio-auto-1-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:20.738 DEBUG 10592 --- [http-nio-auto-1-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /error
+2023-01-22 14:35:20.781 DEBUG 10592 --- [http-nio-auto-1-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:20.956 DEBUG 10592 --- [http-nio-auto-1-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /
+2023-01-22 14:35:20.958 DEBUG 10592 --- [http-nio-auto-1-exec-6] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:20.958 DEBUG 10592 --- [http-nio-auto-1-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:20.959 DEBUG 10592 --- [http-nio-auto-1-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /] with attributes [permitAll]
+2023-01-22 14:35:20.959 DEBUG 10592 --- [http-nio-auto-1-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /
+2023-01-22 14:35:20.966 DEBUG 10592 --- [http-nio-auto-1-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:20.988 DEBUG 10592 --- [http-nio-auto-1-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /design
+2023-01-22 14:35:20.989 DEBUG 10592 --- [http-nio-auto-1-exec-7] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:20.989 DEBUG 10592 --- [http-nio-auto-1-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:20.990 DEBUG 10592 --- [http-nio-auto-1-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /design] with attributes [hasRole('USER')]
+2023-01-22 14:35:20.990 DEBUG 10592 --- [http-nio-auto-1-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /design
+2023-01-22 14:35:21.054 DEBUG 10592 --- [http-nio-auto-1-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:21.086 DEBUG 10592 --- [http-nio-auto-1-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /styles.css
+2023-01-22 14:35:21.086 DEBUG 10592 --- [http-nio-auto-1-exec-8] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:21.086 DEBUG 10592 --- [http-nio-auto-1-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:21.087 DEBUG 10592 --- [http-nio-auto-1-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /styles.css] with attributes [permitAll]
+2023-01-22 14:35:21.088 DEBUG 10592 --- [http-nio-auto-1-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /styles.css
+2023-01-22 14:35:21.096 DEBUG 10592 --- [http-nio-auto-1-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:21.137 DEBUG 10592 --- [http-nio-auto-1-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /
+2023-01-22 14:35:21.138 DEBUG 10592 --- [http-nio-auto-1-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:21.139 DEBUG 10592 --- [http-nio-auto-1-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:21.140 DEBUG 10592 --- [http-nio-auto-1-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /] with attributes [permitAll]
+2023-01-22 14:35:21.140 DEBUG 10592 --- [http-nio-auto-1-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /
+2023-01-22 14:35:21.154 DEBUG 10592 --- [http-nio-auto-1-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:21.188 DEBUG 10592 --- [http-nio-auto-1-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /design
+2023-01-22 14:35:21.188 DEBUG 10592 --- [http-nio-auto-1-exec-10] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:21.189 DEBUG 10592 --- [http-nio-auto-1-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:21.190 DEBUG 10592 --- [http-nio-auto-1-exec-10] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /design] with attributes [hasRole('USER')]
+2023-01-22 14:35:21.190 DEBUG 10592 --- [http-nio-auto-1-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /design
+2023-01-22 14:35:21.213 DEBUG 10592 --- [http-nio-auto-1-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:35:21.240 DEBUG 10592 --- [http-nio-auto-1-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /styles.css
+2023-01-22 14:35:21.241 DEBUG 10592 --- [http-nio-auto-1-exec-1] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:21.241 DEBUG 10592 --- [http-nio-auto-1-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=2, username=testuser3, password=$2a$10$zQfh64XKCngXJ2z3yFqiF.Nrcl7R3AFJPr7MYcwVyyRZfq7.qhFSW, fullname=Test McTest, street=1234 Test Street, city=Testville, state=TX, zip=12345, phoneNumber=123-123-1234), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=AC93626A83AE7C876091768F73DE7321], Granted Authorities=[ROLE_USER]]]
+2023-01-22 14:35:21.242 DEBUG 10592 --- [http-nio-auto-1-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /styles.css] with attributes [permitAll]
+2023-01-22 14:35:21.243 DEBUG 10592 --- [http-nio-auto-1-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /styles.css
+2023-01-22 14:35:21.251 DEBUG 10592 --- [http-nio-auto-1-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 14:36:15.137  WARN 13204 --- [Thread-20] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2023-01-22 14:36:16.752 DEBUG 13204 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PostAuthorize("hasRole(\'ADMIN\') || returnObject.user.username == authentication.name") found on specific method: public com.kingcode.springwebapp.tacoorder.TacoOrder com.kingcode.springwebapp.administrator.OrderAdminService.getOrder(long)
+2023-01-22 14:36:16.753 DEBUG 13204 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.kingcode.springwebapp.administrator.OrderAdminService; public com.kingcode.springwebapp.tacoorder.TacoOrder com.kingcode.springwebapp.administrator.OrderAdminService.getOrder(long)]] with attributes [[authorize: 'permitAll', filter: 'null', filterTarget: 'null'], [authorize: 'hasRole('ADMIN') || returnObject.user.username == authentication.name', filter: 'null']]
+2023-01-22 14:36:16.756 DEBUG 13204 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ADMIN\')") found on specific method: public void com.kingcode.springwebapp.administrator.OrderAdminService.deleteAllOrders()
+2023-01-22 14:36:16.757 DEBUG 13204 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.kingcode.springwebapp.administrator.OrderAdminService; public void com.kingcode.springwebapp.administrator.OrderAdminService.deleteAllOrders()]] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-01-22 14:36:16.792  WARN 13204 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-22 14:36:17.547 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ADMIN')] for Ant [pattern='/admin/**', POST]
+2023-01-22 14:36:17.547 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('USER')] for Ant [pattern='/design']
+2023-01-22 14:36:17.547 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('USER')] for Ant [pattern='/orders']
+2023-01-22 14:36:17.548 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/']
+2023-01-22 14:36:17.548 DEBUG 13204 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/**']
+2023-01-22 14:36:17.571  INFO 13204 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@577ec356, org.springframework.security.web.context.SecurityContextPersistenceFilter@44d23b82, org.springframework.security.web.header.HeaderWriterFilter@31e7683b, org.springframework.security.web.csrf.CsrfFilter@35ec0667, org.springframework.security.web.authentication.logout.LogoutFilter@284076a, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@1ec8ddd9, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@e11b533, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@30f40694, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@abbf8de, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17ff02, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47aebf8b, org.springframework.security.web.session.SessionManagementFilter@11d8d8e0, org.springframework.security.web.access.ExceptionTranslationFilter@7f462c3a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1639e1f6]
