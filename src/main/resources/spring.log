@@ -1450,3 +1450,678 @@ java.lang.AssertionError: null
 2023-01-22 17:07:25.402 DEBUG 5000 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/tacos/18
 2023-01-22 17:07:25.405 DEBUG 5000 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
 2023-01-22 17:07:25.406 DEBUG 5000 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:37:41.970  WARN 5000 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2023-01-22 19:38:06.169 DEBUG 7212 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PostAuthorize("hasRole(\'ADMIN\') || returnObject.user.username == authentication.name") found on specific method: public com.kingcode.springwebapp.tacoorder.TacoOrder com.kingcode.springwebapp.administrator.OrderAdminService.getOrder(long)
+2023-01-22 19:38:06.190 DEBUG 7212 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.kingcode.springwebapp.administrator.OrderAdminService; public com.kingcode.springwebapp.tacoorder.TacoOrder com.kingcode.springwebapp.administrator.OrderAdminService.getOrder(long)]] with attributes [[authorize: 'permitAll', filter: 'null', filterTarget: 'null'], [authorize: 'hasRole('ADMIN') || returnObject.user.username == authentication.name', filter: 'null']]
+2023-01-22 19:38:06.215 DEBUG 7212 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ADMIN\')") found on specific method: public void com.kingcode.springwebapp.administrator.OrderAdminService.deleteAllOrders()
+2023-01-22 19:38:06.215 DEBUG 7212 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.kingcode.springwebapp.administrator.OrderAdminService; public void com.kingcode.springwebapp.administrator.OrderAdminService.deleteAllOrders()]] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-01-22 19:38:06.287  WARN 7212 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-22 19:38:08.446 DEBUG 7212 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ADMIN')] for Ant [pattern='/admin/**', POST]
+2023-01-22 19:38:08.447 DEBUG 7212 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('USER')] for Ant [pattern='/design']
+2023-01-22 19:38:08.448 DEBUG 7212 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('USER')] for Ant [pattern='/orders']
+2023-01-22 19:38:08.448 DEBUG 7212 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/']
+2023-01-22 19:38:08.448 DEBUG 7212 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/**']
+2023-01-22 19:38:08.491  INFO 7212 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a41561, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d3302b4, org.springframework.security.web.header.HeaderWriterFilter@73f483be, org.springframework.security.web.csrf.CsrfFilter@69e11703, org.springframework.security.web.authentication.logout.LogoutFilter@1897b9a1, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@29d9d09d, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@b3a51e3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@141ee65e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40ed1aef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5330df67, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f600129, org.springframework.security.web.session.SessionManagementFilter@2efd8ca2, org.springframework.security.web.access.ExceptionTranslationFilter@1ebeb136, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5a93e7ef]
+2023-01-22 19:43:32.406 DEBUG 7212 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /login?error
+2023-01-22 19:43:32.412 DEBUG 7212 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:43:32.416 DEBUG 7212 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:43:32.416 DEBUG 7212 --- [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 2A0FA7FAA2980CD82E1775E9580680E9
+2023-01-22 19:43:32.421 DEBUG 7212 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /login?error] with attributes [permitAll]
+2023-01-22 19:43:32.422 DEBUG 7212 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /login?error
+2023-01-22 19:43:32.826 DEBUG 7212 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:32.831 DEBUG 7212 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:32.831 DEBUG 7212 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:32.925 DEBUG 7212 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /images/TacoCloud.png
+2023-01-22 19:43:32.926 DEBUG 7212 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:43:32.926 DEBUG 7212 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:43:32.927 DEBUG 7212 --- [http-nio-8080-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/TacoCloud.png] with attributes [permitAll]
+2023-01-22 19:43:32.927 DEBUG 7212 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /images/TacoCloud.png
+2023-01-22 19:43:32.938 DEBUG 7212 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:32.939 DEBUG 7212 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:32.939 DEBUG 7212 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:32.941 DEBUG 7212 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 19:43:32.942 DEBUG 7212 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:43:32.942 DEBUG 7212 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:43:32.942 DEBUG 7212 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 19:43:32.979 DEBUG 7212 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:32.982 DEBUG 7212 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:32.983 DEBUG 7212 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:36.659 DEBUG 7212 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /login
+2023-01-22 19:43:36.661 DEBUG 7212 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:43:36.661 DEBUG 7212 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:43:36.662 DEBUG 7212 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /login] with attributes [permitAll]
+2023-01-22 19:43:36.662 DEBUG 7212 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /login
+2023-01-22 19:43:36.669 DEBUG 7212 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:36.671 DEBUG 7212 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:36.671 DEBUG 7212 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:36.716 DEBUG 7212 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /images/TacoCloud.png
+2023-01-22 19:43:36.717 DEBUG 7212 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:43:36.717 DEBUG 7212 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:43:36.717 DEBUG 7212 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/TacoCloud.png] with attributes [permitAll]
+2023-01-22 19:43:36.717 DEBUG 7212 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /images/TacoCloud.png
+2023-01-22 19:43:36.721 DEBUG 7212 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:36.722 DEBUG 7212 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:36.722 DEBUG 7212 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:36.723 DEBUG 7212 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 19:43:36.725 DEBUG 7212 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:43:36.725 DEBUG 7212 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:43:36.725 DEBUG 7212 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 19:43:36.727 DEBUG 7212 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:36.729 DEBUG 7212 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:36.730 DEBUG 7212 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:42.827 DEBUG 7212 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /register
+2023-01-22 19:43:42.827 DEBUG 7212 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:43:42.829 DEBUG 7212 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:43:42.829 DEBUG 7212 --- [http-nio-8080-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /register] with attributes [permitAll]
+2023-01-22 19:43:42.830 DEBUG 7212 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /register
+2023-01-22 19:43:42.840 DEBUG 7212 --- [http-nio-8080-exec-5] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:42.842 DEBUG 7212 --- [http-nio-8080-exec-5] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:42.842 DEBUG 7212 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:42.887 DEBUG 7212 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /images/TacoCloud.png
+2023-01-22 19:43:42.887 DEBUG 7212 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:43:42.887 DEBUG 7212 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:43:42.888 DEBUG 7212 --- [http-nio-8080-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/TacoCloud.png] with attributes [permitAll]
+2023-01-22 19:43:42.888 DEBUG 7212 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /images/TacoCloud.png
+2023-01-22 19:43:42.896 DEBUG 7212 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:42.898 DEBUG 7212 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:42.898 DEBUG 7212 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:42.898 DEBUG 7212 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 19:43:42.898 DEBUG 7212 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:43:42.899 DEBUG 7212 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:43:42.899 DEBUG 7212 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 19:43:42.902 DEBUG 7212 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:42.903 DEBUG 7212 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:42.904 DEBUG 7212 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:49.020 DEBUG 7212 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /register
+2023-01-22 19:43:49.020 DEBUG 7212 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:43:49.021 DEBUG 7212 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:43:49.022 DEBUG 7212 --- [http-nio-8080-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /register] with attributes [permitAll]
+2023-01-22 19:43:49.022 DEBUG 7212 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /register
+2023-01-22 19:43:49.152 DEBUG 7212 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:49.153 DEBUG 7212 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:49.153 DEBUG 7212 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:49.178 DEBUG 7212 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /login
+2023-01-22 19:43:49.178 DEBUG 7212 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:43:49.179 DEBUG 7212 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:43:49.179 DEBUG 7212 --- [http-nio-8080-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /login] with attributes [permitAll]
+2023-01-22 19:43:49.179 DEBUG 7212 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /login
+2023-01-22 19:43:49.185 DEBUG 7212 --- [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:49.185 DEBUG 7212 --- [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:49.186 DEBUG 7212 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:49.234 DEBUG 7212 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /images/TacoCloud.png
+2023-01-22 19:43:49.234 DEBUG 7212 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:43:49.234 DEBUG 7212 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:43:49.235 DEBUG 7212 --- [http-nio-8080-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/TacoCloud.png] with attributes [permitAll]
+2023-01-22 19:43:49.235 DEBUG 7212 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /images/TacoCloud.png
+2023-01-22 19:43:49.240 DEBUG 7212 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:49.240 DEBUG 7212 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:49.240 DEBUG 7212 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:49.241 DEBUG 7212 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 19:43:49.241 DEBUG 7212 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:43:49.242 DEBUG 7212 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:43:49.242 DEBUG 7212 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 19:43:49.245 DEBUG 7212 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:49.248 DEBUG 7212 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:43:49.248 DEBUG 7212 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:51.991 DEBUG 7212 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /login
+2023-01-22 19:43:51.992 DEBUG 7212 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:43:52.414 DEBUG 7212 --- [http-nio-8080-exec-10] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-01-22 19:43:52.415 DEBUG 7212 --- [http-nio-8080-exec-10] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from B383A9346041EC788429C1BD389394C1
+2023-01-22 19:43:52.416 DEBUG 7212 --- [http-nio-8080-exec-10] o.s.s.w.csrf.CsrfAuthenticationStrategy  : Replaced CSRF Token
+2023-01-22 19:43:52.427 DEBUG 7212 --- [http-nio-8080-exec-10] w.a.UsernamePasswordAuthenticationFilter : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]
+2023-01-22 19:43:52.428 DEBUG 7212 --- [http-nio-8080-exec-10] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /
+2023-01-22 19:43:52.429 DEBUG 7212 --- [http-nio-8080-exec-10] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@700391da]
+2023-01-22 19:43:52.430 DEBUG 7212 --- [http-nio-8080-exec-10] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@700391da]
+2023-01-22 19:43:52.430 DEBUG 7212 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:52.471 DEBUG 7212 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /
+2023-01-22 19:43:52.471 DEBUG 7212 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:43:52.472 DEBUG 7212 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:43:52.472 DEBUG 7212 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /] with attributes [permitAll]
+2023-01-22 19:43:52.472 DEBUG 7212 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /
+2023-01-22 19:43:52.478 DEBUG 7212 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:52.538 DEBUG 7212 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /images/spring-learning.jpg
+2023-01-22 19:43:52.539 DEBUG 7212 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:43:52.539 DEBUG 7212 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:43:52.540 DEBUG 7212 --- [http-nio-8080-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/spring-learning.jpg] with attributes [permitAll]
+2023-01-22 19:43:52.540 DEBUG 7212 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /images/spring-learning.jpg
+2023-01-22 19:43:52.546 DEBUG 7212 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:52.546 DEBUG 7212 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 19:43:52.547 DEBUG 7212 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:43:52.547 DEBUG 7212 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:43:52.547 DEBUG 7212 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 19:43:52.550 DEBUG 7212 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:54.055 DEBUG 7212 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /design
+2023-01-22 19:43:54.056 DEBUG 7212 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:43:54.056 DEBUG 7212 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:43:54.059 DEBUG 7212 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /design] with attributes [hasRole('USER')]
+2023-01-22 19:43:54.059 DEBUG 7212 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /design
+2023-01-22 19:43:54.113 DEBUG 7212 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:54.159 DEBUG 7212 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /styles.css
+2023-01-22 19:43:54.159 DEBUG 7212 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:43:54.159 DEBUG 7212 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /images/taco.jpg
+2023-01-22 19:43:54.160 DEBUG 7212 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:43:54.160 DEBUG 7212 --- [http-nio-8080-exec-5] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:43:54.160 DEBUG 7212 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:43:54.160 DEBUG 7212 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /styles.css] with attributes [permitAll]
+2023-01-22 19:43:54.160 DEBUG 7212 --- [http-nio-8080-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/taco.jpg] with attributes [permitAll]
+2023-01-22 19:43:54.161 DEBUG 7212 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /styles.css
+2023-01-22 19:43:54.161 DEBUG 7212 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /images/taco.jpg
+2023-01-22 19:43:54.167 DEBUG 7212 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:43:54.181 DEBUG 7212 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:44:05.887 DEBUG 7212 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /design
+2023-01-22 19:44:05.887 DEBUG 7212 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:44:05.887 DEBUG 7212 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:44:05.888 DEBUG 7212 --- [http-nio-8080-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /design] with attributes [hasRole('USER')]
+2023-01-22 19:44:05.888 DEBUG 7212 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /design
+2023-01-22 19:44:05.927 DEBUG 7212 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:44:05.947 DEBUG 7212 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /orders/current
+2023-01-22 19:44:05.948 DEBUG 7212 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:44:05.948 DEBUG 7212 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:44:05.948 DEBUG 7212 --- [http-nio-8080-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /orders/current] with attributes [permitAll]
+2023-01-22 19:44:05.948 DEBUG 7212 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /orders/current
+2023-01-22 19:44:05.976 DEBUG 7212 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:44:06.017 DEBUG 7212 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /styles.css
+2023-01-22 19:44:06.018 DEBUG 7212 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /images/TacoCloud.png
+2023-01-22 19:44:06.018 DEBUG 7212 --- [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:44:06.018 DEBUG 7212 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:44:06.018 DEBUG 7212 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:44:06.018 DEBUG 7212 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:44:06.018 DEBUG 7212 --- [http-nio-8080-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /styles.css] with attributes [permitAll]
+2023-01-22 19:44:06.018 DEBUG 7212 --- [http-nio-8080-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/TacoCloud.png] with attributes [permitAll]
+2023-01-22 19:44:06.019 DEBUG 7212 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /styles.css
+2023-01-22 19:44:06.019 DEBUG 7212 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /images/TacoCloud.png
+2023-01-22 19:44:06.023 DEBUG 7212 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:44:06.023 DEBUG 7212 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:44:06.023 DEBUG 7212 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 19:44:06.025 DEBUG 7212 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:44:06.025 DEBUG 7212 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:44:06.026 DEBUG 7212 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 19:44:06.030 DEBUG 7212 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:47:48.233  WARN 7212 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2023-01-22 19:48:01.152 DEBUG 800 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PostAuthorize("hasRole(\'ADMIN\') || returnObject.user.username == authentication.name") found on specific method: public com.kingcode.springwebapp.tacoorder.TacoOrder com.kingcode.springwebapp.administrator.OrderAdminService.getOrder(long)
+2023-01-22 19:48:01.168 DEBUG 800 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.kingcode.springwebapp.administrator.OrderAdminService; public com.kingcode.springwebapp.tacoorder.TacoOrder com.kingcode.springwebapp.administrator.OrderAdminService.getOrder(long)]] with attributes [[authorize: 'permitAll', filter: 'null', filterTarget: 'null'], [authorize: 'hasRole('ADMIN') || returnObject.user.username == authentication.name', filter: 'null']]
+2023-01-22 19:48:01.198 DEBUG 800 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ADMIN\')") found on specific method: public void com.kingcode.springwebapp.administrator.OrderAdminService.deleteAllOrders()
+2023-01-22 19:48:01.198 DEBUG 800 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.kingcode.springwebapp.administrator.OrderAdminService; public void com.kingcode.springwebapp.administrator.OrderAdminService.deleteAllOrders()]] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-01-22 19:48:01.258  WARN 800 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-22 19:48:02.774 DEBUG 800 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ADMIN')] for Ant [pattern='/admin/**', POST]
+2023-01-22 19:48:02.776 DEBUG 800 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('USER')] for Ant [pattern='/design']
+2023-01-22 19:48:02.776 DEBUG 800 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('USER')] for Ant [pattern='/orders']
+2023-01-22 19:48:02.776 DEBUG 800 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/']
+2023-01-22 19:48:02.776 DEBUG 800 --- [restartedMain] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/**']
+2023-01-22 19:48:02.812  INFO 800 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@37b0812, org.springframework.security.web.context.SecurityContextPersistenceFilter@444c7147, org.springframework.security.web.header.HeaderWriterFilter@3d6547f7, org.springframework.security.web.csrf.CsrfFilter@21cc0c2b, org.springframework.security.web.authentication.logout.LogoutFilter@221cc447, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@2ceb1d44, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@79f798aa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@d9df695, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3dc4c1bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2051eb74, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1bbe9653, org.springframework.security.web.session.SessionManagementFilter@7054993e, org.springframework.security.web.access.ExceptionTranslationFilter@712e95ee, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c7ddb32]
+2023-01-22 19:48:09.485 DEBUG 800 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /orders/current
+2023-01-22 19:48:09.497 DEBUG 800 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:09.499 DEBUG 800 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:09.506 DEBUG 800 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /orders/current] with attributes [permitAll]
+2023-01-22 19:48:09.507 DEBUG 800 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /orders/current
+2023-01-22 19:48:09.529 DEBUG 800 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:09.533 DEBUG 800 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 19:48:09.534 DEBUG 800 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:09.534 DEBUG 800 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:09.534 DEBUG 800 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 19:48:09.584 DEBUG 800 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:12.737 DEBUG 800 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /
+2023-01-22 19:48:12.738 DEBUG 800 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:12.738 DEBUG 800 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:12.739 DEBUG 800 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /] with attributes [permitAll]
+2023-01-22 19:48:12.739 DEBUG 800 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /
+2023-01-22 19:48:13.083 DEBUG 800 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:13.152 DEBUG 800 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /images/spring-learning.jpg
+2023-01-22 19:48:13.152 DEBUG 800 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:13.153 DEBUG 800 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:13.153 DEBUG 800 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/spring-learning.jpg] with attributes [permitAll]
+2023-01-22 19:48:13.154 DEBUG 800 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /images/spring-learning.jpg
+2023-01-22 19:48:13.159 DEBUG 800 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:13.160 DEBUG 800 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 19:48:13.160 DEBUG 800 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:13.161 DEBUG 800 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:13.161 DEBUG 800 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 19:48:13.217 DEBUG 800 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:15.018 DEBUG 800 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /design
+2023-01-22 19:48:15.018 DEBUG 800 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:15.018 DEBUG 800 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:15.019 DEBUG 800 --- [http-nio-8080-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /design] with attributes [hasRole('USER')]
+2023-01-22 19:48:15.019 DEBUG 800 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /design
+2023-01-22 19:48:15.184 ERROR 800 --- [http-nio-8080-exec-2] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-2] Exception processing template "design": An error happened during template parsing (template: "class path resource [templates/design.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/design.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1397) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:178) ~[spring-security-oauth2-client-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.5.3.jar:2.5.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "user.fullname" (template: "design" - line 11, col 27)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	... 99 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.fullname" (template: "design" - line 11, col 27)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	... 101 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'fullname' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213) ~[spring-expression-5.3.9.jar:5.3.9]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104) ~[spring-expression-5.3.9.jar:5.3.9]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51) ~[spring-expression-5.3.9.jar:5.3.9]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406) ~[spring-expression-5.3.9.jar:5.3.9]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92) ~[spring-expression-5.3.9.jar:5.3.9]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.3.9.jar:5.3.9]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.3.9.jar:5.3.9]
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	... 120 common frames omitted
+
+2023-01-22 19:48:15.186 DEBUG 800 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:15.188 ERROR 800 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/design.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'fullname' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213) ~[spring-expression-5.3.9.jar:5.3.9]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104) ~[spring-expression-5.3.9.jar:5.3.9]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51) ~[spring-expression-5.3.9.jar:5.3.9]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406) ~[spring-expression-5.3.9.jar:5.3.9]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92) ~[spring-expression-5.3.9.jar:5.3.9]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.3.9.jar:5.3.9]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.3.9.jar:5.3.9]
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1397) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.50.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:178) ~[spring-security-oauth2-client-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.5.3.jar:2.5.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-01-22 19:48:15.190 DEBUG 800 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 19:48:15.190 DEBUG 800 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:15.190 DEBUG 800 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:15.191 DEBUG 800 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 19:48:15.212 DEBUG 800 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:16.497 DEBUG 800 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /
+2023-01-22 19:48:16.498 DEBUG 800 --- [http-nio-8080-exec-5] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:16.499 DEBUG 800 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:16.499 DEBUG 800 --- [http-nio-8080-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /] with attributes [permitAll]
+2023-01-22 19:48:16.500 DEBUG 800 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /
+2023-01-22 19:48:16.508 DEBUG 800 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:16.552 DEBUG 800 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /images/spring-learning.jpg
+2023-01-22 19:48:16.552 DEBUG 800 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:16.552 DEBUG 800 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:16.552 DEBUG 800 --- [http-nio-8080-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/spring-learning.jpg] with attributes [permitAll]
+2023-01-22 19:48:16.553 DEBUG 800 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /images/spring-learning.jpg
+2023-01-22 19:48:16.566 DEBUG 800 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:16.567 DEBUG 800 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 19:48:16.567 DEBUG 800 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:16.567 DEBUG 800 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:16.567 DEBUG 800 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 19:48:16.571 DEBUG 800 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:23.222 DEBUG 800 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /login
+2023-01-22 19:48:23.223 DEBUG 800 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:23.223 DEBUG 800 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:23.224 DEBUG 800 --- [http-nio-8080-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /login] with attributes [permitAll]
+2023-01-22 19:48:23.224 DEBUG 800 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /login
+2023-01-22 19:48:23.233 DEBUG 800 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:23.278 DEBUG 800 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /images/TacoCloud.png
+2023-01-22 19:48:23.278 DEBUG 800 --- [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:23.278 DEBUG 800 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:23.279 DEBUG 800 --- [http-nio-8080-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/TacoCloud.png] with attributes [permitAll]
+2023-01-22 19:48:23.279 DEBUG 800 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /images/TacoCloud.png
+2023-01-22 19:48:23.285 DEBUG 800 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:23.286 DEBUG 800 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 19:48:23.286 DEBUG 800 --- [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:23.287 DEBUG 800 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:23.287 DEBUG 800 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 19:48:23.291 DEBUG 800 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:31.982 DEBUG 800 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /login
+2023-01-22 19:48:31.983 DEBUG 800 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:31.983 DEBUG 800 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$kHlBh72zqOv24lpm/mQqVOK5UtoXCgGv134i13x4xoF.YCGYRnthO, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=B383A9346041EC788429C1BD389394C1], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:32.299 DEBUG 800 --- [http-nio-8080-exec-9] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to find user 'user'
+2023-01-22 19:48:32.300 DEBUG 800 --- [http-nio-8080-exec-9] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /login?error
+2023-01-22 19:48:32.301 DEBUG 800 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Did not store empty SecurityContext
+2023-01-22 19:48:32.301 DEBUG 800 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Did not store empty SecurityContext
+2023-01-22 19:48:32.301 DEBUG 800 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:32.327 DEBUG 800 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /login?error
+2023-01-22 19:48:32.327 DEBUG 800 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:48:32.328 DEBUG 800 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:48:32.328 DEBUG 800 --- [http-nio-8080-exec-10] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /login?error] with attributes [permitAll]
+2023-01-22 19:48:32.329 DEBUG 800 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /login?error
+2023-01-22 19:48:32.333 DEBUG 800 --- [http-nio-8080-exec-10] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:32.334 DEBUG 800 --- [http-nio-8080-exec-10] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:32.334 DEBUG 800 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:32.371 DEBUG 800 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /images/TacoCloud.png
+2023-01-22 19:48:32.371 DEBUG 800 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:48:32.371 DEBUG 800 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:48:32.372 DEBUG 800 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/TacoCloud.png] with attributes [permitAll]
+2023-01-22 19:48:32.372 DEBUG 800 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /images/TacoCloud.png
+2023-01-22 19:48:32.379 DEBUG 800 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:32.380 DEBUG 800 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:32.381 DEBUG 800 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:32.381 DEBUG 800 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 19:48:32.381 DEBUG 800 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:48:32.382 DEBUG 800 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:48:32.382 DEBUG 800 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 19:48:32.383 DEBUG 800 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:32.385 DEBUG 800 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:32.386 DEBUG 800 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:33.429 DEBUG 800 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /register
+2023-01-22 19:48:33.429 DEBUG 800 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:48:33.430 DEBUG 800 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:48:33.430 DEBUG 800 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /register] with attributes [permitAll]
+2023-01-22 19:48:33.430 DEBUG 800 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /register
+2023-01-22 19:48:33.437 DEBUG 800 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:33.438 DEBUG 800 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:33.438 DEBUG 800 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:33.484 DEBUG 800 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /images/TacoCloud.png
+2023-01-22 19:48:33.484 DEBUG 800 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:48:33.484 DEBUG 800 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:48:33.485 DEBUG 800 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/TacoCloud.png] with attributes [permitAll]
+2023-01-22 19:48:33.485 DEBUG 800 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /images/TacoCloud.png
+2023-01-22 19:48:33.488 DEBUG 800 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:33.488 DEBUG 800 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:33.488 DEBUG 800 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:33.488 DEBUG 800 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 19:48:33.488 DEBUG 800 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:48:33.489 DEBUG 800 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:48:33.489 DEBUG 800 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 19:48:33.490 DEBUG 800 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:33.491 DEBUG 800 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:33.491 DEBUG 800 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:39.955 DEBUG 800 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /register
+2023-01-22 19:48:39.956 DEBUG 800 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:48:39.957 DEBUG 800 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:48:39.957 DEBUG 800 --- [http-nio-8080-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /register] with attributes [permitAll]
+2023-01-22 19:48:39.958 DEBUG 800 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /register
+2023-01-22 19:48:40.098 DEBUG 800 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:40.099 DEBUG 800 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:40.099 DEBUG 800 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:40.116 DEBUG 800 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /login
+2023-01-22 19:48:40.116 DEBUG 800 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:48:40.116 DEBUG 800 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:48:40.117 DEBUG 800 --- [http-nio-8080-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /login] with attributes [permitAll]
+2023-01-22 19:48:40.117 DEBUG 800 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /login
+2023-01-22 19:48:40.121 DEBUG 800 --- [http-nio-8080-exec-5] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:40.122 DEBUG 800 --- [http-nio-8080-exec-5] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:40.122 DEBUG 800 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:40.172 DEBUG 800 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /images/TacoCloud.png
+2023-01-22 19:48:40.172 DEBUG 800 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:48:40.172 DEBUG 800 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:48:40.173 DEBUG 800 --- [http-nio-8080-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/TacoCloud.png] with attributes [permitAll]
+2023-01-22 19:48:40.173 DEBUG 800 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /images/TacoCloud.png
+2023-01-22 19:48:40.177 DEBUG 800 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:40.177 DEBUG 800 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:40.177 DEBUG 800 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:40.178 DEBUG 800 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 19:48:40.178 DEBUG 800 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:48:40.178 DEBUG 800 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-01-22 19:48:40.178 DEBUG 800 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 19:48:40.181 DEBUG 800 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:40.183 DEBUG 800 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2023-01-22 19:48:40.183 DEBUG 800 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:43.032 DEBUG 800 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /login
+2023-01-22 19:48:43.033 DEBUG 800 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-01-22 19:48:43.182 DEBUG 800 --- [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-01-22 19:48:43.239 DEBUG 800 --- [http-nio-8080-exec-7] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from FB396A6EDFFC3E017C13DA34817103F9
+2023-01-22 19:48:43.240 DEBUG 800 --- [http-nio-8080-exec-7] o.s.s.w.csrf.CsrfAuthenticationStrategy  : Replaced CSRF Token
+2023-01-22 19:48:43.241 DEBUG 800 --- [http-nio-8080-exec-7] w.a.UsernamePasswordAuthenticationFilter : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$Gz7B2MFOcoeubXj2FdhVcumev.tmAuqr2UYyhDW1fFyXK3L7bSObC, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FB396A6EDFFC3E017C13DA34817103F9], Granted Authorities=[ROLE_USER]]
+2023-01-22 19:48:43.241 DEBUG 800 --- [http-nio-8080-exec-7] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /
+2023-01-22 19:48:43.242 DEBUG 800 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$Gz7B2MFOcoeubXj2FdhVcumev.tmAuqr2UYyhDW1fFyXK3L7bSObC, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FB396A6EDFFC3E017C13DA34817103F9], Granted Authorities=[ROLE_USER]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@ff8a1ec]
+2023-01-22 19:48:43.242 DEBUG 800 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$Gz7B2MFOcoeubXj2FdhVcumev.tmAuqr2UYyhDW1fFyXK3L7bSObC, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FB396A6EDFFC3E017C13DA34817103F9], Granted Authorities=[ROLE_USER]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@ff8a1ec]
+2023-01-22 19:48:43.243 DEBUG 800 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:43.261 DEBUG 800 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /
+2023-01-22 19:48:43.261 DEBUG 800 --- [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$Gz7B2MFOcoeubXj2FdhVcumev.tmAuqr2UYyhDW1fFyXK3L7bSObC, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FB396A6EDFFC3E017C13DA34817103F9], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:43.261 DEBUG 800 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$Gz7B2MFOcoeubXj2FdhVcumev.tmAuqr2UYyhDW1fFyXK3L7bSObC, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FB396A6EDFFC3E017C13DA34817103F9], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:43.262 DEBUG 800 --- [http-nio-8080-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /] with attributes [permitAll]
+2023-01-22 19:48:43.262 DEBUG 800 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /
+2023-01-22 19:48:43.266 DEBUG 800 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:43.313 DEBUG 800 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /images/spring-learning.jpg
+2023-01-22 19:48:43.313 DEBUG 800 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$Gz7B2MFOcoeubXj2FdhVcumev.tmAuqr2UYyhDW1fFyXK3L7bSObC, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FB396A6EDFFC3E017C13DA34817103F9], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:43.314 DEBUG 800 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$Gz7B2MFOcoeubXj2FdhVcumev.tmAuqr2UYyhDW1fFyXK3L7bSObC, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FB396A6EDFFC3E017C13DA34817103F9], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:43.315 DEBUG 800 --- [http-nio-8080-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/spring-learning.jpg] with attributes [permitAll]
+2023-01-22 19:48:43.315 DEBUG 800 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /images/spring-learning.jpg
+2023-01-22 19:48:43.320 DEBUG 800 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:43.321 DEBUG 800 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2023-01-22 19:48:43.321 DEBUG 800 --- [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$Gz7B2MFOcoeubXj2FdhVcumev.tmAuqr2UYyhDW1fFyXK3L7bSObC, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FB396A6EDFFC3E017C13DA34817103F9], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:43.322 DEBUG 800 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$Gz7B2MFOcoeubXj2FdhVcumev.tmAuqr2UYyhDW1fFyXK3L7bSObC, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FB396A6EDFFC3E017C13DA34817103F9], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:43.322 DEBUG 800 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /error
+2023-01-22 19:48:43.325 DEBUG 800 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:44.800 DEBUG 800 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /design
+2023-01-22 19:48:44.800 DEBUG 800 --- [http-nio-8080-exec-10] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$Gz7B2MFOcoeubXj2FdhVcumev.tmAuqr2UYyhDW1fFyXK3L7bSObC, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FB396A6EDFFC3E017C13DA34817103F9], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:44.800 DEBUG 800 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$Gz7B2MFOcoeubXj2FdhVcumev.tmAuqr2UYyhDW1fFyXK3L7bSObC, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FB396A6EDFFC3E017C13DA34817103F9], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:44.801 DEBUG 800 --- [http-nio-8080-exec-10] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /design] with attributes [hasRole('USER')]
+2023-01-22 19:48:44.801 DEBUG 800 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /design
+2023-01-22 19:48:44.843 DEBUG 800 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:44.894 DEBUG 800 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /styles.css
+2023-01-22 19:48:44.894 DEBUG 800 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$Gz7B2MFOcoeubXj2FdhVcumev.tmAuqr2UYyhDW1fFyXK3L7bSObC, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FB396A6EDFFC3E017C13DA34817103F9], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:44.894 DEBUG 800 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$Gz7B2MFOcoeubXj2FdhVcumev.tmAuqr2UYyhDW1fFyXK3L7bSObC, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FB396A6EDFFC3E017C13DA34817103F9], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:44.894 DEBUG 800 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /images/taco.jpg
+2023-01-22 19:48:44.895 DEBUG 800 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /styles.css] with attributes [permitAll]
+2023-01-22 19:48:44.895 DEBUG 800 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$Gz7B2MFOcoeubXj2FdhVcumev.tmAuqr2UYyhDW1fFyXK3L7bSObC, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FB396A6EDFFC3E017C13DA34817103F9], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:44.895 DEBUG 800 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /styles.css
+2023-01-22 19:48:44.895 DEBUG 800 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User(id=4, username=user, password=$2a$10$Gz7B2MFOcoeubXj2FdhVcumev.tmAuqr2UYyhDW1fFyXK3L7bSObC, fullname=Mehran Hosseini, street=Garnissongase 14-16/3/330, city=Wien, state=, zip=1090, phoneNumber=+436764624808), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=FB396A6EDFFC3E017C13DA34817103F9], Granted Authorities=[ROLE_USER]]]
+2023-01-22 19:48:44.895 DEBUG 800 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /images/taco.jpg] with attributes [permitAll]
+2023-01-22 19:48:44.895 DEBUG 800 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /images/taco.jpg
+2023-01-22 19:48:44.901 DEBUG 800 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-01-22 19:48:44.901 DEBUG 800 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request

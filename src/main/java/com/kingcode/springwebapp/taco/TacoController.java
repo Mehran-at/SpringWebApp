@@ -1,5 +1,6 @@
 package com.kingcode.springwebapp.taco;
 
+import com.kingcode.springwebapp.tacoorder.TacoOrder;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
@@ -35,4 +36,12 @@ public class TacoController {
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
+
+    @PostMapping(consumes="application/json")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Taco postTaco(@RequestBody Taco taco) {
+        return tacoRepo.save(taco);
+    }
+
+
 }
