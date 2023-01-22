@@ -3,6 +3,9 @@ spring:
     generate-unique-name: false
     name: tacocloud
   security:
+    user:
+      name: buzz
+      password: infinity
     oauth2:
       client:
         registration:
@@ -14,6 +17,19 @@ spring:
 jasypt:
   encryptor:
     password: ${SPRING_WEB_APP}
+
+#spring:
+#  profiles: prod
+#
+#  datasource:
+#    url: jdbc:mysql://localhost/tacocloud
+#    username: tacouser
+#    password: tacopassword
+
+logging:
+  level:
+    tacos: WARN
+---
 
 #  using a MySQL database
 #spring:
@@ -70,3 +86,7 @@ logging:
 taco:
   orders:
     pageSize: 10
+
+discount:
+  codes:
+    abcdef: 10
