@@ -1,6 +1,11 @@
 package com.kingcode.springwebapp.taco;
 
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.w3c.dom.html.HTMLMetaElement;
 
-public interface TacoRepository extends CrudRepository<Taco, Long> {
+import java.util.List;
+
+public interface TacoRepository extends PagingAndSortingRepository<Taco, Long> {
 }

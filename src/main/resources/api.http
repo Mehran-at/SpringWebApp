@@ -1,0 +1,8 @@
+###Fetch al recent tacos
+GET localhost:8080/api/tacos?recent
+
+###Fech taco by id
+GET localhost:8080/api/tacos/1
+
+###Fech taco by id which is null
+GET localhost:8080/api/tacos/18
