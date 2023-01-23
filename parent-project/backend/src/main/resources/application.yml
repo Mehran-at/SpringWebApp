@@ -78,7 +78,7 @@ logging:
 #-------------------------------------------------------------------------\
 logging:
   file:
-    path: src/main/resources
+    path: parent-project/backend/src/main/resources
     file: TacoCloud.log
   level:
     root: WARN
