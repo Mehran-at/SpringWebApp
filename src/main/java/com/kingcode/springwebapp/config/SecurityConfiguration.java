@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+@SuppressWarnings("deprecation")
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
@@ -28,11 +29,17 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
-            .antMatchers(HttpMethod.POST, "/admin/**")
-            .access("hasRole('ADMIN')")
+//            .antMatchers(HttpMethod.POST, "/admin/**")
+//            .access("hasRole('ADMIN')")
 
-            .antMatchers("/design", "/orders").access("hasRole('USER')")
-            .antMatchers("/", "/**").access("permitAll")
+            .antMatchers(HttpMethod.OPTIONS).permitAll() // needed for Angular/CORS
+            .antMatchers("/api/**")
+            .permitAll()
+
+            //.access("hasRole('USER')")
+            .antMatchers(HttpMethod.PATCH, "/api/ingredients").permitAll()
+            .antMatchers("/**")
+            .access("permitAll")
 
             .and()
             .formLogin()
@@ -43,8 +50,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .loginPage("/login")
 
             .and()
+            .httpBasic()
+            .realmName("Taco Cloud")
+
+            .and()
             .logout()
-            .logoutSuccessUrl("/login")
+            .logoutSuccessUrl("/")
 
             // Make H2-Console non-secured; for debug purposes
             .and()

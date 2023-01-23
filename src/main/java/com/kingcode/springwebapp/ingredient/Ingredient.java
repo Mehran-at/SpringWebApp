@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 @Data
 @RequiredArgsConstructor
-@NoArgsConstructor(force=true)
+@NoArgsConstructor(access=AccessLevel.PROTECTED, force=true)
 @Entity
 public class Ingredient {
 
@@ -19,4 +19,5 @@ public class Ingredient {
     public enum Type {
         WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE
     }
+
 }

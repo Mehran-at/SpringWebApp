@@ -1,14 +1,16 @@
 package com.kingcode.springwebapp.tacoorder;
 
+import com.kingcode.springwebapp.user.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Slf4j
-@RestController
-@RequestMapping(path = "/api/orders",
-    produces = "application/json")
+@Controller
+@RequestMapping(path = "/api/orders", produces = "application/json")
 @CrossOrigin(origins = "http://tacocloud:8080")
 public class TacoOrderController {
 
@@ -77,5 +79,15 @@ public class TacoOrderController {
         } catch (EmptyResultDataAccessException e) {
         }
     }
+
+//    @GetMapping
+//    public String ordersForUser(@AuthenticationPrincipal User user, Model model) {
+//
+//        Pageable pageable = PageRequest.of(0, props.getPageSize());
+//        model.addAttribute("orders",
+//            orderRepo.findByUserOrderByPlacedAtDesc(user, pageable));
+//
+//        return "orderList";
+//    }
 
 }

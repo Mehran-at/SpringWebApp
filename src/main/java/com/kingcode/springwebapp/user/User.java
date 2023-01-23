@@ -1,5 +1,6 @@
 package com.kingcode.springwebapp.user;
 
+import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -12,12 +13,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serial;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
 @Entity
 @Data
-@NoArgsConstructor(force = true)
+@NoArgsConstructor(access= AccessLevel.PROTECTED, force=true)
 @RequiredArgsConstructor
 public class User implements UserDetails {
 
@@ -25,10 +27,11 @@ public class User implements UserDetails {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
     private final String username;
+
     private final String password;
     private final String fullname;
     private final String street;
