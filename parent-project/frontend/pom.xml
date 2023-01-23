@@ -4,7 +4,7 @@
           http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>tacocloud-ui</artifactId>
+	<artifactId>frontend</artifactId>
 	<packaging>jar</packaging>
 
 <!--  <parent>-->
@@ -19,7 +19,7 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-	<name>tacocloud-ui</name>
+	<name>frontend</name>
 	<description>Taco Cloud UI</description>
 
   <properties>
