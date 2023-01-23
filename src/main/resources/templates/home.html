@@ -2,14 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Spring Learning Path</title>
+    <title>Taco Cloud</title>
 </head>
+
 <body>
 <h1>Welcome to...</h1>
-<img th:src="@{/images/spring_learning.jpg}"/>
+<img th:src="@{/images/spring-learning.jpg}"/>
+<form method="POST" th:action="@{/logout}" id="logoutForm">
+    <input type="submit" value="Logout"/>
+</form>
+
+<a th:href="@{/design}" id="design">Design a taco</a>
 </body>
 </html>
-
-
-
