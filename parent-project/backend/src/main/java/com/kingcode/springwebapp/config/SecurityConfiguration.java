@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SuppressWarnings("deprecation")
@@ -20,33 +21,19 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsService userDetailsService;
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
-//            .antMatchers(HttpMethod.POST, "/admin/**")
-//            .access("hasRole('ADMIN')")
-
             .antMatchers(HttpMethod.OPTIONS).permitAll() // needed for Angular/CORS
             .antMatchers("/api/**")
             .permitAll()
-
             //.access("hasRole('USER')")
             .antMatchers(HttpMethod.PATCH, "/api/ingredients").permitAll()
-            .antMatchers("/**")
-            .access("permitAll")
+            .antMatchers("/**").access("permitAll")
 
             .and()
             .formLogin()
-            .loginPage("/login")
-
-            .and()
-            .oauth2Login()
             .loginPage("/login")
 
             .and()
@@ -57,10 +44,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .logout()
             .logoutSuccessUrl("/")
 
-            // Make H2-Console non-secured; for debug purposes
             .and()
             .csrf()
-            .ignoringAntMatchers("/h2-console/**")
+            .ignoringAntMatchers("/h2-console/**", "/api/**")
 
             // Allow pages to be loaded in frames from the same origin; needed for H2-Console
             .and()
@@ -70,11 +56,21 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         ;
     }
 
+    @Bean
+    public PasswordEncoder encoder() {
+//    return new StandardPasswordEncoder("53cr3t");
+        return NoOpPasswordEncoder.getInstance();
+    }
+
+
     @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+    protected void configure(AuthenticationManagerBuilder auth)
+        throws Exception {
+
         auth
             .userDetailsService(userDetailsService)
-            .passwordEncoder(passwordEncoder());
+            .passwordEncoder(encoder());
 
     }
+
 }
