@@ -14,7 +14,7 @@
 <!--  </parent>-->
 
   <parent>
-    <artifactId>parent-project</artifactId>
+    <artifactId>taco-cloud-parent</artifactId>
     <groupId>com.baeldung</groupId>
     <version>1.0-SNAPSHOT</version>
   </parent>
