@@ -9,13 +9,13 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
 @Component
+@ConfigurationProperties(prefix="taco.orders")
 @Data
-@ConfigurationProperties(prefix = "taco.orders")
 @Validated
-// Configuration property holder class
 public class OrderProps {
 
     @Min(value=5, message="must be between 5 and 25")
     @Max(value=25, message="must be between 5 and 25")
     private int pageSize = 20;
+
 }

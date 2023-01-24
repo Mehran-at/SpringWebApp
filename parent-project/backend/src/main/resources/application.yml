@@ -17,8 +17,8 @@ taco:
 #    org.springframework.data.rest: debug
 
 spring:
-  main:
-    web-application-type: none
+#  main:
+#    web-application-type: none
   data:
     rest:
       base-path: /data-api

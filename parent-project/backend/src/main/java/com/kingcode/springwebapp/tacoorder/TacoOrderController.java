@@ -3,80 +3,81 @@ package com.kingcode.springwebapp.tacoorder;
 import com.kingcode.springwebapp.user.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.support.SessionStatus;
 
-@RestController
-@RequestMapping(path="/api/orders",
-    produces="application/json")
-@CrossOrigin(origins="http://tacocloud:8080")
+import javax.validation.Valid;
+
+@Controller
+@RequestMapping("/orders")
+@SessionAttributes("order")
 public class TacoOrderController {
 
-    private TacoOrderRepository repo;
+    private TacoOrderRepository orderRepo;
 
-    public TacoOrderController(TacoOrderRepository repo) {
-        this.repo = repo;
+    private OrderProps props;
+
+    public TacoOrderController(TacoOrderRepository orderRepo,
+                           OrderProps props) {
+        this.orderRepo = orderRepo;
+        this.props = props;
     }
 
-    @GetMapping(produces="application/json")
-    public Iterable<TacoOrder> allOrders() {
-        return repo.findAll();
+    @GetMapping("/current")
+    public String orderForm(@AuthenticationPrincipal User user,
+                            @ModelAttribute TacoOrder order) {
+        if (order.getDeliveryName() == null) {
+            order.setDeliveryName(user.getFullname());
+        }
+        if (order.getDeliveryStreet() == null) {
+            order.setDeliveryStreet(user.getStreet());
+        }
+        if (order.getDeliveryCity() == null) {
+            order.setDeliveryCity(user.getCity());
+        }
+        if (order.getDeliveryState() == null) {
+            order.setDeliveryState(user.getState());
+        }
+        if (order.getDeliveryZip() == null) {
+            order.setDeliveryZip(user.getZip());
+        }
+
+        return "orderForm";
     }
 
-    @PostMapping(consumes="application/json")
-    @ResponseStatus(HttpStatus.CREATED)
-    public TacoOrder postOrder(@RequestBody TacoOrder order) {
-        return repo.save(order);
+    @PostMapping
+    public String processOrder(@Valid TacoOrder order, Errors errors,
+                               SessionStatus sessionStatus,
+                               @AuthenticationPrincipal User user) {
+
+        if (errors.hasErrors()) {
+            return "orderForm";
+        }
+
+        order.setUser(user);
+
+        orderRepo.save(order);
+        sessionStatus.setComplete();
+
+        return "redirect:/";
     }
 
-    @PutMapping(path="/{orderId}", consumes="application/json")
-    public TacoOrder putOrder(
-        @PathVariable("orderId") Long orderId,
-        @RequestBody TacoOrder order) {
-        order.setId(orderId);
-        return repo.save(order);
-    }
+    @GetMapping
+    public String ordersForUser(
+        @AuthenticationPrincipal User user, Model model) {
 
-    @PatchMapping(path="/{orderId}", consumes="application/json")
-    public TacoOrder patchOrder(@PathVariable("orderId") Long orderId,
-                                @RequestBody TacoOrder patch) {
+        Pageable pageable = PageRequest.of(0, props.getPageSize());
+        model.addAttribute("orders",
+            orderRepo.findByUserOrderByPlacedAtDesc(user, pageable));
 
-        TacoOrder order = repo.findById(orderId).get();
-        if (patch.getDeliveryName() != null) {
-            order.setDeliveryName(patch.getDeliveryName());
-        }
-        if (patch.getDeliveryStreet() != null) {
-            order.setDeliveryStreet(patch.getDeliveryStreet());
-        }
-        if (patch.getDeliveryCity() != null) {
-            order.setDeliveryCity(patch.getDeliveryCity());
-        }
-        if (patch.getDeliveryState() != null) {
-            order.setDeliveryState(patch.getDeliveryState());
-        }
-        if (patch.getDeliveryZip() != null) {
-            order.setDeliveryZip(patch.getDeliveryZip());
-        }
-        if (patch.getCcNumber() != null) {
-            order.setCcNumber(patch.getCcNumber());
-        }
-        if (patch.getCcExpiration() != null) {
-            order.setCcExpiration(patch.getCcExpiration());
-        }
-        if (patch.getCcCVV() != null) {
-            order.setCcCVV(patch.getCcCVV());
-        }
-        return repo.save(order);
-    }
-
-    @DeleteMapping("/{orderId}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteOrder(@PathVariable("orderId") Long orderId) {
-        try {
-            repo.deleteById(orderId);
-        } catch (EmptyResultDataAccessException e) {}
+        return "orderList";
     }
 
 }
