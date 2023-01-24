@@ -33,7 +33,8 @@ public class TacoCloudClient {
      * Specify parameter as varargs argument
      */
     public Ingredient getIngredientById(String ingredientId) {
-        return rest.getForObject("http://localhost:8080/ingredients/{id}", Ingredient.class, ingredientId);
+        return rest.getForObject("http://localhost:8080/ingredients/{id}",
+            Ingredient.class, ingredientId);
     }
 
     /*
@@ -47,15 +48,14 @@ public class TacoCloudClient {
     /*
      * Specify parameters with a map
      */
-
-    /*
-    public Ingredient getIngredientById(String ingredientId) {
-        Map<String, String> urlVariables = new HashMap<>();
-        urlVariables.put("id", ingredientId);
-        return rest.getForObject("http://localhost:8080/ingredients/{id}", Ingredient.class, urlVariables);
-    }
-    */
-
+  /*
+  public Ingredient getIngredientById(String ingredientId) {
+    Map<String, String> urlVariables = new HashMap<>();
+    urlVariables.put("id", ingredientId);
+    return rest.getForObject("http://localhost:8080/ingredients/{id}",
+        Ingredient.class, urlVariables);
+  }
+  */
 
     /*
      * Request with URI instead of String
@@ -87,8 +87,7 @@ public class TacoCloudClient {
 
     public List<Ingredient> getAllIngredients() {
         return rest.exchange("http://localhost:8080/ingredients",
-                HttpMethod.GET, null, new ParameterizedTypeReference<List<Ingredient>>() {
-                })
+                HttpMethod.GET, null, new ParameterizedTypeReference<List<Ingredient>>() {})
             .getBody();
     }
 
@@ -97,14 +96,16 @@ public class TacoCloudClient {
     //
 
     public void updateIngredient(Ingredient ingredient) {
-        rest.put("http://localhost:8080/ingredients/{id}", ingredient, ingredient.getId());
+        rest.put("http://localhost:8080/ingredients/{id}",
+            ingredient, ingredient.getId());
     }
 
     //
     // POST examples
     //
     public Ingredient createIngredient(Ingredient ingredient) {
-        return rest.postForObject("http://localhost:8080/ingredients", ingredient, Ingredient.class);
+        return rest.postForObject("http://localhost:8080/ingredients",
+            ingredient, Ingredient.class);
     }
 
     /*
@@ -116,7 +117,8 @@ public class TacoCloudClient {
      */
   /*
   public java.net.URI createIngredient(Ingredient ingredient) {
-    return rest.postForLocation("http://localhost:8080/ingredients",ingredient);
+    return rest.postForLocation("http://localhost:8080/ingredients",
+        ingredient);
   }
   */
 
@@ -126,7 +128,8 @@ public class TacoCloudClient {
            rest.postForEntity("http://localhost:8080/ingredients",
                               ingredient,
                               Ingredient.class);
-    log.info("New resource created at {}", responseEntity.getHeaders().getLocation());
+    log.info("New resource created at {}",
+             responseEntity.getHeaders().getLocation());
     return responseEntity.getBody();
   }
   */
@@ -136,7 +139,8 @@ public class TacoCloudClient {
     //
 
     public void deleteIngredient(Ingredient ingredient) {
-        rest.delete("http://localhost:8080/ingredients/{id}", ingredient.getId());
+        rest.delete("http://localhost:8080/ingredients/{id}",
+            ingredient.getId());
     }
 
     //
@@ -145,8 +149,7 @@ public class TacoCloudClient {
 
     public Iterable<Ingredient> getAllIngredientsWithTraverson() {
         ParameterizedTypeReference<CollectionModel<Ingredient>> ingredientType =
-            new ParameterizedTypeReference<CollectionModel<Ingredient>>() {
-            };
+            new ParameterizedTypeReference<CollectionModel<Ingredient>>() {};
 
         CollectionModel<Ingredient> ingredientRes =
             traverson
@@ -169,10 +172,11 @@ public class TacoCloudClient {
     }
 
     public Iterable<Taco> getRecentTacosWithTraverson() {
-        ParameterizedTypeReference<CollectionModel<Taco>> tacoType = new ParameterizedTypeReference<>() {
-            };
+        ParameterizedTypeReference<CollectionModel<Taco>> tacoType =
+            new ParameterizedTypeReference<CollectionModel<Taco>>() {};
 
-        CollectionModel<Taco> tacoRes = traverson
+        CollectionModel<Taco> tacoRes =
+            traverson
                 .follow("tacos")
                 .follow("recents")
                 .toObject(tacoType);

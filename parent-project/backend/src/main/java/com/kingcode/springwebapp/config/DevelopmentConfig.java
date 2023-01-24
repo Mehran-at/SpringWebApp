@@ -5,6 +5,7 @@ import com.kingcode.springwebapp.ingredient.Ingredient.Type;
 import com.kingcode.springwebapp.ingredient.IngredientRepository;
 import com.kingcode.springwebapp.taco.Taco;
 import com.kingcode.springwebapp.taco.TacoRepository;
+import com.kingcode.springwebapp.user.User;
 import com.kingcode.springwebapp.user.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
@@ -55,6 +56,10 @@ public class DevelopmentConfig {
             repo.save(jack);
             repo.save(salsa);
             repo.save(sourCream);
+
+            userRepo.save(new User("habuma", encoder.encode("password"),
+                "Craig Walls", "123 North Street", "Cross Roads", "TX",
+                "76227", "123-123-1234"));
 
             Taco taco1 = new Taco();
             taco1.setName("Carnivore");

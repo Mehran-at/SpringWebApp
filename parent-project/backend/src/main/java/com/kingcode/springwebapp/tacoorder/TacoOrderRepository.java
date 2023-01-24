@@ -6,6 +6,10 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface TacoOrderRepository extends CrudRepository<TacoOrder, Long> {
-//    List<TacoOrder> findByUserOrderByPlacedAtDesc(User user, Pageable pageable);
+public interface TacoOrderRepository
+    extends CrudRepository<TacoOrder, Long> {
+
+    List<TacoOrder> findByUserOrderByPlacedAtDesc(
+        User user, Pageable pageable);
+
 }

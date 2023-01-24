@@ -3,19 +3,26 @@ package com.kingcode.springwebapp.user;
 import com.kingcode.springwebapp.user.User;
 import com.kingcode.springwebapp.user.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-@RequiredArgsConstructor
-public class UserRepositoryUserDetailsService implements UserDetailsService {
+public class UserRepositoryUserDetailsService
+    implements UserDetailsService {
 
-    private final UserRepository userRepo;
+    private UserRepository userRepo;
+
+    @Autowired
+    public UserRepositoryUserDetailsService(UserRepository userRepo) {
+        this.userRepo = userRepo;
+    }
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username)
+        throws UsernameNotFoundException {
         User user = userRepo.findByUsername(username);
         if (user != null) {
             return user;
@@ -23,4 +30,5 @@ public class UserRepositoryUserDetailsService implements UserDetailsService {
         throw new UsernameNotFoundException(
             "User '" + username + "' not found");
     }
+
 }

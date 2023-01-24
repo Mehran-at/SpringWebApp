@@ -10,32 +10,22 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-@Controller
-//@RequestMapping(path="/api/tacos", produces={"application/json", "text/xml"})
-@RequestMapping(path = "/api/tacos", produces ="application/json")
-//@CrossOrigin(origins={"http://tacocloud:8080", "http://tacocloud.com"})
-@CrossOrigin(origins = "http://tacocloud:8080")
+@RestController
+@RequestMapping(path="/api/tacos",                      // <1>
+    produces="application/json")
+@CrossOrigin(origins="http://tacocloud:8080")        // <2>
 public class TacoController {
-
     private TacoRepository tacoRepo;
 
     public TacoController(TacoRepository tacoRepo) {
         this.tacoRepo = tacoRepo;
     }
 
-    @GetMapping(params = "recent")
-    public Iterable<Taco> recentTacos() {
-        PageRequest page = PageRequest.of(0, 12, Sort.by("createdAt").descending());
+    @GetMapping(params="recent")
+    public Iterable<Taco> recentTacos() {                 //<3>
+        PageRequest page = PageRequest.of(
+            0, 12, Sort.by("createdAt").descending());
         return tacoRepo.findAll(page).getContent();
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<Taco> tacoById(@PathVariable("id") Long id) {
-        Optional<Taco> optTaco = tacoRepo.findById(id);
-        if (optTaco.isPresent()) {
-            return new ResponseEntity<>(optTaco.get(), HttpStatus.OK);
-        }
-        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
     @PostMapping(consumes="application/json")
@@ -44,5 +34,20 @@ public class TacoController {
         return tacoRepo.save(taco);
     }
 
+    @GetMapping("/{id}")
+    public Optional<Taco> tacoById(@PathVariable("id") Long id) {
+        return tacoRepo.findById(id);
+    }
+
+  /*
+  @GetMapping("/{id}")
+  public ResponseEntity<Taco> tacoById(@PathVariable("id") Long id) {
+    Optional<Taco> optTaco = tacoRepo.findById(id);
+    if (optTaco.isPresent()) {
+      return new ResponseEntity<>(optTaco.get(), HttpStatus.OK);
+    }
+    return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+  }
+  */
 
 }

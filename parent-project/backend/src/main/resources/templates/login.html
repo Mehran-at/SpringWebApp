@@ -1,36 +1,34 @@
-<!-- tag::all[] -->
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
 <head>
   <title>Taco Cloud</title>
 </head>
 
 <body>
-<h1>Login</h1>
-<img th:src="@{/images/TacoCloud.png}"/>
+<section layout:fragment="main" class="content">
+  <h1>Login</h1>
 
-<div th:if="${error}">
-  Unable to login. Check your username and password.
-</div>
-<div><p>login facebook<a th:href="@{/oauth2/authorization/facebook}">Sign in with Facebook</a></p>
-</div>
+  <div th:if="${error}">
+    Unable to login. Check your username and password.
+  </div>
+  <div><p>login facebook<a th:href="@{/oauth2/authorization/facebook}">Sign in with Facebook</a></p>
+  </div>
 
-<p>New here? Click
-  <a th:href="@{/register}">here</a> to register.</p>
+  <p>New here? Click
+    <a th:href="@{/register}">here</a> to register.</p>
 
+  <form method="POST" th:action="@{/login}" id="loginForm">
+    <label for="username">Username: </label>
+    <input type="text" name="username"/><br/>
 
-<!-- tag::thAction[] -->
-<form method="POST" th:action="@{/login}" id="loginForm">
-  <!-- end::thAction[] -->
-  <label for="username">Username: </label>
-  <input type="text" name="username" id="username" /><br/>
+    <label for="password">Password: </label>
+    <input type="password" name="password"/><br/>
 
-  <label for="password">Password: </label>
-  <input type="password" name="password" id="password" /><br/>
-
-  <input type="submit" value="Login"/>
-</form>
+    <input type="submit" value="Login"/>
+  </form>
+</section>
 </body>
 </html>
-<!-- end::all[] -->

@@ -13,13 +13,19 @@ import org.springframework.hateoas.server.RepresentationModelProcessor;
 public class SpringDataRestConfiguration {
 
     @Bean
-    public RepresentationModelProcessor<PagedModel<EntityModel<Taco>>> tacoProcessor(EntityLinks links) {
-        return resource -> {
-            resource.add(
-                links.linkFor(Taco.class)
-                    .slash("recent")
-                    .withRel("recents"));
-            return resource;
+    public RepresentationModelProcessor<PagedModel<EntityModel<Taco>>>
+    tacoProcessor(EntityLinks links) {
+
+        return new RepresentationModelProcessor<PagedModel<EntityModel<Taco>>>() {
+            @Override
+            public PagedModel<EntityModel<Taco>> process(
+                PagedModel<EntityModel<Taco>> resource) {
+                resource.add(
+                    links.linkFor(Taco.class)
+                        .slash("recent")
+                        .withRel("recents"));
+                return resource;
+            }
         };
     }
 

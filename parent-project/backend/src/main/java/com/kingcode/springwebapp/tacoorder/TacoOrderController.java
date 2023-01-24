@@ -8,10 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-@Slf4j
-@Controller
-@RequestMapping(path = "/api/orders", produces = "application/json")
-@CrossOrigin(origins = "http://tacocloud:8080")
+@RestController
+@RequestMapping(path="/api/orders",
+    produces="application/json")
+@CrossOrigin(origins="http://tacocloud:8080")
 public class TacoOrderController {
 
     private TacoOrderRepository repo;
@@ -20,18 +20,18 @@ public class TacoOrderController {
         this.repo = repo;
     }
 
-    @GetMapping(produces = "application/json")
+    @GetMapping(produces="application/json")
     public Iterable<TacoOrder> allOrders() {
         return repo.findAll();
     }
 
-    @PostMapping(consumes = "application/json")
+    @PostMapping(consumes="application/json")
     @ResponseStatus(HttpStatus.CREATED)
     public TacoOrder postOrder(@RequestBody TacoOrder order) {
         return repo.save(order);
     }
 
-    @PutMapping(path = "/{orderId}", consumes = "application/json")
+    @PutMapping(path="/{orderId}", consumes="application/json")
     public TacoOrder putOrder(
         @PathVariable("orderId") Long orderId,
         @RequestBody TacoOrder order) {
@@ -39,7 +39,7 @@ public class TacoOrderController {
         return repo.save(order);
     }
 
-    @PatchMapping(path = "/{orderId}", consumes = "application/json")
+    @PatchMapping(path="/{orderId}", consumes="application/json")
     public TacoOrder patchOrder(@PathVariable("orderId") Long orderId,
                                 @RequestBody TacoOrder patch) {
 
@@ -76,18 +76,7 @@ public class TacoOrderController {
     public void deleteOrder(@PathVariable("orderId") Long orderId) {
         try {
             repo.deleteById(orderId);
-        } catch (EmptyResultDataAccessException e) {
-        }
+        } catch (EmptyResultDataAccessException e) {}
     }
-
-//    @GetMapping
-//    public String ordersForUser(@AuthenticationPrincipal User user, Model model) {
-//
-//        Pageable pageable = PageRequest.of(0, props.getPageSize());
-//        model.addAttribute("orders",
-//            orderRepo.findByUserOrderByPlacedAtDesc(user, pageable));
-//
-//        return "orderList";
-//    }
 
 }

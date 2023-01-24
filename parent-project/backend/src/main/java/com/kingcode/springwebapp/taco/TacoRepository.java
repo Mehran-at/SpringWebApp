@@ -7,5 +7,7 @@ import org.w3c.dom.html.HTMLMetaElement;
 
 import java.util.List;
 
-public interface TacoRepository extends PagingAndSortingRepository<Taco, Long> {
+public interface TacoRepository
+    extends PagingAndSortingRepository<Taco, Long> {
+
 }
