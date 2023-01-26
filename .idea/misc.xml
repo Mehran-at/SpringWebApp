@@ -6,7 +6,6 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/kingcode/springwebapp/tacocloud-web/pom.xml" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/kingcode/springwebapp/tacocloud-ui/pom.xml" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/kingcode/springwebapp/tacocloud-security/pom.xml" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/kingcode/springwebapp/tacocloud-restclient/pom.xml" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/kingcode/springwebapp/tacocloud-domain/pom.xml" />
