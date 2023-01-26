@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/backend/taco-cloud-parent (1) (sia).iml" filepath="$PROJECT_DIR$/backend/taco-cloud-parent (1) (sia).iml" />
-      <module fileurl="file://$PROJECT_DIR$/taco-cloud-parent (2) (com.baeldung).iml" filepath="$PROJECT_DIR$/taco-cloud-parent (2) (com.baeldung).iml" />
-    </modules>
-  </component>
-</project>
