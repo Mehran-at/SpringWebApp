@@ -5,12 +5,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -27,10 +25,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
             .authorizeRequests()
             .antMatchers(HttpMethod.OPTIONS).permitAll() // needed for Angular/CORS
-            .antMatchers("/api/**")
+            .antMatchers(HttpMethod.POST, "/api/ingredients").hasRole("ADMIN")
+//            .hasAuthority("SCOPE_writeIngredients")
+            .antMatchers(HttpMethod.DELETE, "/api//ingredients").hasRole("ADMIN")
+//            .hasAuthority("SCOPE_deleteIngredients")
+            .antMatchers("/api//tacos", "/api//orders/**")
             .permitAll()
-            //.access("hasRole('USER')")
-            .antMatchers(HttpMethod.PATCH, "/api/ingredients").permitAll()
             .antMatchers("/**").access("permitAll")
 
             .and()

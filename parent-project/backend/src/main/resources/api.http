@@ -28,5 +28,44 @@ GET http://localhost:8080/data-api/tacos?size=5
 ###Fetch second page of tacos by adding the page parameter
 GET http://localhost:8080/data-api/tacos?size=5&page=0
 
-###Fetch the 12 most recently created tacos
-localhost:8080/data-api/tacos?sort=createdAt,desc&page=0&size=12
+###Ann new ingredient
+# curl localhost:8080/api/ingredients
+#  -H"Content-type: application/json"
+#  -d'{"id":"FISH","name":"Stinky Fish", "type":"PROTEIN"}'
+POST localhost:8080/api/ingredients
+Content-Type: application/json
+
+{
+  "id": "FISH",
+  "name": "Stinky Fish",
+  "type": "PROTEIN"
+}
+
+###
+# curl localhost:8080/api/ingredients/GRBF -X DELETE
+DELETE localhost:8080/api/ingredients/GRBF
+
+###
+# curl localhost:8080/ingredients
+#  -H"Content-type: application/json"
+#  -d'{"id":"FISH","name":"Stinky Fish", "type":"PROTEIN"}'
+#  -u admin:l3tm31n
+POST localhost:8080/ingredients
+Authorization: Basic admin l3tm31n
+Content-Type: application/json
+
+{
+  "id": "FISH",
+  "name": "Stinky Fish",
+  "type": "PROTEIN"
+}
+
+###
+
+
+
+
+
+
+
+
