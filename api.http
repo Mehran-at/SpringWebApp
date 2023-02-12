@@ -1,5 +1,20 @@
-###
 
 ###
+GET http://localhost:8080/oauth2/authorize?
+    response_type=code&
+    client_id=client&
+    scope=openid&
+    redirect_uri=http://spring.io/auth&
+    code_challange=U4uioN6WtNE_Tp8H1A4xomwD_QRim5uVvx4oa3l7byU
+    code_challenge_method=S256
 
 ###
+POST http://localhost:8080/oauth2/token?
+    client_id=client&
+    redirect_uri=http://spring.io/auth&
+    grant_type=authorization_code&
+    code=SLK3zeQ1S9meIho_em1_0635YYoo9pESJLBMyoE7WjMjE-rKj7O7bCJwuBtM7GV1hh3GKozyI7f7abtH-Ru_l2-IOk6i9r5ZMughFtrVltZox-_PWT1nqGu6N2CGIgmb&
+    code_verifier=akMJCv2HPqQlIyoThCY3_qiKc2dUEVfOSzrhjXd99WUAgYpQ9vfuRBWjih_9KYIIBY55.5jc4X0ra9Op5bXigCsAE2loi4TPU3QzO_djOo5HO5NyoBn22kLMfQrShKEJ
+
+###
+http://localhost:8080/oauth2/token?client_id=client&redirect_uri=http://spring.io/auth&grant_type=authorization_code&code=SLK3zeQ1S9meIho_em1_0635YYoo9pESJLBMyoE7WjMjE-rKj7O7bCJwuBtM7GV1hh3GKozyI7f7abtH-Ru_l2-IOk6i9r5ZMughFtrVltZox-_PWT1nqGu6N2CGIgmb&code_verifier=akMJCv2HPqQlIyoThCY3_qiKc2dUEVfOSzrhjXd99WUAgYpQ9vfuRBWjih_9KYIIBY55.5jc4X0ra9Op5bXigCsAE2loi4TPU3QzO_djOo5HO5NyoBn22kLMfQrShKEJ
