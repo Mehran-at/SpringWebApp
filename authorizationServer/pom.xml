@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.kingcode</groupId>
-    <artifactId>authorization-server</artifactId>
+    <artifactId>authorizationServer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>authorization-server</name>
     <description>authorization-server</description>

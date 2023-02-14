@@ -10,7 +10,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <artifactId>resource-server</artifactId>
+    <artifactId>resourceSrver</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
