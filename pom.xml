@@ -16,8 +16,8 @@
     <description>authorization-server</description>
     <modules>
         <module>authorization-server</module>
-        <module>resource</module>
-        <module>resource</module>
+        <module>resource-server</module>
+        <module>resource-server</module>
     </modules>
     <properties>
         <java.version>11</java.version>
