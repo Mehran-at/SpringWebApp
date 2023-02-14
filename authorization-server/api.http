@@ -1,0 +1,4 @@
+###
+POST http://localhost:8080/oauth/token?grant_type=password&username=bill&password=12345&scope=read
+###
+GET http://localhost:8080/oauth/check_token?token=15fc49ad-7b88-48ee-a1bf-ee607098ef20
